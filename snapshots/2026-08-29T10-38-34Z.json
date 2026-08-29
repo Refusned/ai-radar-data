@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "run_key": "ai-radar:2026-08-29T07:30:00+04:00",
+  "attempt_id": "cloud-control-20260829T103834Z-002",
+  "generated_at": "2026-08-29T10:38:34Z",
+  "window_start": "2026-08-27T09:45:00Z",
+  "window_end": "2026-08-29T10:38:34Z",
+  "status": "complete",
+  "source_health": [
+    {
+      "source_key": "openai",
+      "label": "OpenAI News",
+      "status": "ok",
+      "detail": "Проверена официальная лента и первоисточник решения по Cursor за 28 августа."
+    },
+    {
+      "source_key": "anthropic",
+      "label": "Anthropic News and Research",
+      "status": "ok",
+      "detail": "Проверены официальные публикации об automated alignment researchers и Model Hardware Standard."
+    },
+    {
+      "source_key": "google-deepmind",
+      "label": "Google AI, DeepMind and Antigravity",
+      "status": "ok",
+      "detail": "Проверены официальные ленты Google AI и DeepMind, а также первоисточник обновления Teamwork."
+    },
+    {
+      "source_key": "microsoft-github",
+      "label": "Microsoft and GitHub",
+      "status": "ok",
+      "detail": "Проверены официальный Microsoft AI blog и GitHub Changelog за окно выпуска."
+    },
+    {
+      "source_key": "meta-ai",
+      "label": "Meta AI",
+      "status": "ok",
+      "detail": "Проверена официальная лента Meta AI; новых событий с рейтингом 7+ за окно не найдено."
+    },
+    {
+      "source_key": "xai",
+      "label": "xAI News",
+      "status": "ok",
+      "detail": "Проверена официальная лента xAI; новых событий с рейтингом 7+ за окно не найдено."
+    },
+    {
+      "source_key": "mistral",
+      "label": "Mistral News",
+      "status": "ok",
+      "detail": "Проверена официальная лента Mistral; новых событий с рейтингом 7+ за окно не найдено."
+    },
+    {
+      "source_key": "nvidia",
+      "label": "NVIDIA Newsroom",
+      "status": "ok",
+      "detail": "Проверена официальная лента NVIDIA; релизы в актуальном окне не прошли порог практической значимости."
+    },
+    {
+      "source_key": "hugging-face",
+      "label": "Hugging Face Blog",
+      "status": "ok",
+      "detail": "Проверена официальная и community-лента Hugging Face; новых событий с рейтингом 7+ за окно не найдено."
+    },
+    {
+      "source_key": "github-trending",
+      "label": "GitHub Trending daily",
+      "status": "ok",
+      "detail": "Проверен дневной Trending; stars today сохранены как отдельный сигнал и не названы delta_24h."
+    },
+    {
+      "source_key": "github-topic-search",
+      "label": "GitHub AI topic search",
+      "status": "ok",
+      "detail": "Проверены свежие репозитории по темам artificial-intelligence, ai-agents и llm; кандидаты объединены по owner/repo."
+    },
+    {
+      "source_key": "hacker-news",
+      "label": "Hacker News newest",
+      "status": "ok",
+      "detail": "Проверена лента newest как сигнал обнаружения; факты подтверждались только первоисточниками."
+    }
+  ],
+  "news_items": [
+    {
+      "id": "openai-cursor-spacex-2026-08-28",
+      "title": "OpenAI планирует прекратить поставку моделей в Cursor после сделки со SpaceX",
+      "summary": "OpenAI уведомила SpaceX о намерении завершить контракт на предоставление моделей Cursor с предложенной датой отключения 12 ноября 2026 года и не поставлять Cursor будущие модели.",
+      "why_it_matters": "Команды, критично зависящие от связки Cursor и моделей OpenAI, получили конкретный риск изменения рабочего контура и срок для подготовки миграции.",
+      "apply_today": "Составить список проектов, завязанных на Cursor с OpenAI, и проверить переносимость правил, промптов и рабочих процессов в Codex или другой доступный контур.",
+      "topic": "coding",
+      "score": 10,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+      "source_date": "2026-08-28"
+    },
+    {
+      "id": "anthropic-automated-alignment-researchers-2026-08-28",
+      "title": "Anthropic показала автономный цикл исследований для снижения alignment failures",
+      "summary": "Claude автономно искал литературу, предлагал методы и данные, обучал модели и тестировал улучшения по десяти категориям alignment failures на публичных benchmark-наборах.",
+      "why_it_matters": "Это проверяемый образец длинного исследовательского цикла, в котором агент не только пишет отчёт, но и итеративно улучшает измеримый результат.",
+      "apply_today": "Использовать структуру search-propose-test как шаблон для исследовательского агента, сохраняя отдельные критерии проверки и журнал неудачных гипотез.",
+      "topic": "research",
+      "score": 9,
+      "source_name": "Anthropic",
+      "source_url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+      "source_date": "2026-08-28"
+    },
+    {
+      "id": "google-antigravity-teamwork-2026-08-27",
+      "title": "Google Antigravity расширила Teamwork для долгих multi-agent задач",
+      "summary": "Teamwork организует агентов в динамические команды, где они предлагают, критикуют и уточняют решения в течение часов или дней; preview доступен на платных планах Antigravity.",
+      "why_it_matters": "Обновление показывает переход от одиночных агентных циклов к адаптивной оркестрации с конкурентным поиском, критиками и самопроверкой.",
+      "apply_today": "Проверить на одной сложной задаче схему генератор-критик-синтезатор и сравнить число найденных ошибок с одиночным проходом.",
+      "topic": "agents",
+      "score": 9,
+      "source_name": "Google Antigravity",
+      "source_url": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner",
+      "source_date": "2026-08-27"
+    },
+    {
+      "id": "anthropic-model-hardware-standard-2026-08-27",
+      "title": "Anthropic открыла research preview стандарта управления физическим оборудованием",
+      "summary": "Model Hardware Standard задаёт модель-независимый интерфейс для безопасного управления лабораторными и производственными устройствами через MCP, CLI и программные интерфейсы.",
+      "why_it_matters": "Стандартизация связи AI-агентов с оборудованием сокращает интеграцию с недель до часов и формирует новый слой для автономных лабораторий и производства.",
+      "apply_today": "В архитектурах агентов с внешними действиями выделить отдельный драйверный слой с командами read/write, ограничениями безопасности и явным состоянием устройства.",
+      "topic": "physical-ai",
+      "score": 8,
+      "source_name": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "source_date": "2026-08-27"
+    },
+    {
+      "id": "github-copilot-weekly-2026-08-28",
+      "title": "GitHub расширила Copilot общими агентными сессиями и единым слоем настройки",
+      "summary": "Обновление добавило общие агентные сессии из Slack и Teams, объединило MCP, плагины и skills во вкладке Customize и улучшило восстановление и настройку CLI-сессий.",
+      "why_it_matters": "Агентные функции смещаются из отдельных IDE в совместные командные процессы, где сессия, разрешения и расширения становятся переносимыми элементами рабочего контура.",
+      "apply_today": "Описать для одного рабочего процесса минимальный набор skills, разрешений и точек передачи контекста между чатом, CLI и репозиторием.",
+      "topic": "coding-agents",
+      "score": 8,
+      "source_name": "GitHub Changelog",
+      "source_url": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24/",
+      "source_date": "2026-08-28"
+    }
+  ],
+  "repositories": [
+    {
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "description": "Браузерный симулятор спутниковой разведки с фотограмметрическим глобусом, открытыми геоданными и голосовым AI-агентом.",
+      "use_case": "Исследовать подход к объединению разнородных live-источников на пространственном интерфейсе с явной маркировкой свежести и достоверности данных.",
+      "stars": 11715,
+      "forks": 2361,
+      "trending_stars_today": 3829,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "NOASSERTION",
+      "created_at": "2026-06-22T23:37:22Z",
+      "pushed_at": "2026-08-28T00:46:30Z",
+      "tracking_since": "2026-08-29T10:38:34Z",
+      "score": 10,
+      "signals": ["GitHub Trending daily", "3 829 stars today", "live OSINT", "voice agent"],
+      "source_url": "https://github.com/bilawalsidhu/gods-eye-view"
+    },
+    {
+      "full_name": "freestylefly/awesome-gpt-image-2",
+      "description": "Коллекция промптов, шаблонов и skills для GPT-Image 2, организованная вокруг подхода Prompt as Code.",
+      "use_case": "Использовать структуру как референс для версионирования и повторного применения промптов визуального производства без запуска кода репозитория.",
+      "stars": 24638,
+      "forks": 2428,
+      "trending_stars_today": 1687,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-04-25T09:19:13Z",
+      "pushed_at": "2026-08-28T10:25:04Z",
+      "tracking_since": "2026-08-29T10:38:34Z",
+      "score": 9,
+      "signals": ["GitHub Trending daily", "1 687 stars today", "Prompt as Code", "image generation skills"],
+      "source_url": "https://github.com/freestylefly/awesome-gpt-image-2"
+    },
+    {
+      "full_name": "anthropics/claude-plugins-official",
+      "description": "Официальный каталог управляемых Anthropic плагинов высокого качества для Claude Code.",
+      "use_case": "Изучить принципы упаковки, обнаружения и управления плагинами как референс для собственных библиотек агентных расширений.",
+      "stars": 35167,
+      "forks": 3942,
+      "trending_stars_today": 457,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2025-11-20T18:36:20Z",
+      "pushed_at": "2026-08-29T07:31:08Z",
+      "tracking_since": "2026-08-29T10:38:34Z",
+      "score": 9,
+      "signals": ["GitHub Trending daily", "457 stars today", "official Anthropic", "plugins and skills"],
+      "source_url": "https://github.com/anthropics/claude-plugins-official"
+    },
+    {
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "description": "Библиотека из 163 проверенных научных skills и подключений к специализированным базам для AI-агентов.",
+      "use_case": "Использовать структуру библиотеки как референс для упаковки отраслевых навыков с проверяемыми источниками и узкими сценариями применения.",
+      "stars": 37213,
+      "forks": 3531,
+      "trending_stars_today": 720,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2025-10-19T20:54:15Z",
+      "pushed_at": "2026-08-28T21:41:24Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 9,
+      "signals": ["GitHub Trending daily", "720 stars today", "68 stars between own snapshots", "interval under 24 hours"],
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+    },
+    {
+      "full_name": "cursor/plugins",
+      "description": "Официальная спецификация плагинов Cursor и каталог официальных расширений.",
+      "use_case": "Сравнить структуру manifest и каталогизации расширений с другими агентными экосистемами перед проектированием переносимых skills.",
+      "stars": 6055,
+      "forks": 481,
+      "trending_stars_today": 246,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": null,
+      "created_at": "2026-01-23T01:57:42Z",
+      "pushed_at": "2026-08-28T17:12:06Z",
+      "tracking_since": "2026-08-29T10:38:34Z",
+      "score": 8,
+      "signals": ["GitHub Trending daily", "246 stars today", "official Cursor", "plugin specification"],
+      "source_url": "https://github.com/cursor/plugins"
+    }
+  ],
+  "daily_action": {
+    "title": "Сравнить одиночный и критический агентный проход",
+    "plan": "Взять одну сложную текущую задачу и выполнить её дважды в Codex: сначала одним проходом, затем ролями генератор, критик и синтезатор. Зафиксировать одинаковые критерии качества и число найденных доработок.",
+    "expected_signal": "критический проход обнаружил хотя бы одну существенную ошибку или дал измеримо более полный результат без внешних платных действий",
+    "link": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner"
+  },
+  "corrections": [],
+  "errors": []
+}
