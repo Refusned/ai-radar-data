@@ -50,7 +50,7 @@
     },
     "repositories": {
       "type": "array",
-      "maxItems": 5,
+      "maxItems": 15,
       "items": { "$ref": "#/$defs/repositoryItem" }
     },
     "daily_action": {
