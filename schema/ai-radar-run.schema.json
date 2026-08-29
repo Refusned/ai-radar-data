@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Refusned/ai-radar-data/schema/ai-radar-run.schema.json",
+  "title": "AI Radar run",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_key",
+    "attempt_id",
+    "generated_at",
+    "window_start",
+    "window_end",
+    "status",
+    "source_health",
+    "news_items",
+    "repositories",
+    "daily_action",
+    "corrections",
+    "errors"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "run_key": { "type": "string", "minLength": 8, "maxLength": 160 },
+    "attempt_id": { "type": "string", "minLength": 3, "maxLength": 120 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "window_start": { "type": "string", "format": "date-time" },
+    "window_end": { "type": "string", "format": "date-time" },
+    "status": { "enum": ["complete", "partial", "failed"] },
+    "source_health": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_key", "label", "status", "detail"],
+        "properties": {
+          "source_key": { "type": "string", "minLength": 2, "maxLength": 80 },
+          "label": { "type": "string", "minLength": 2, "maxLength": 120 },
+          "status": { "enum": ["ok", "partial", "unavailable"] },
+          "detail": { "type": "string", "minLength": 2, "maxLength": 500 }
+        }
+      }
+    },
+    "news_items": {
+      "type": "array",
+      "maxItems": 5,
+      "items": { "$ref": "#/$defs/newsItem" }
+    },
+    "repositories": {
+      "type": "array",
+      "maxItems": 5,
+      "items": { "$ref": "#/$defs/repositoryItem" }
+    },
+    "daily_action": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["title", "plan", "expected_signal", "link"],
+          "properties": {
+            "title": { "type": "string", "minLength": 3, "maxLength": 180 },
+            "plan": { "type": "string", "minLength": 3, "maxLength": 700 },
+            "expected_signal": { "type": "string", "minLength": 3, "maxLength": 400 },
+            "link": { "type": "string", "format": "uri", "pattern": "^https://" }
+          }
+        }
+      ]
+    },
+    "corrections": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "text", "source_url"],
+        "properties": {
+          "id": { "type": "string", "minLength": 2, "maxLength": 120 },
+          "text": { "type": "string", "minLength": 3, "maxLength": 700 },
+          "source_url": { "type": "string", "format": "uri", "pattern": "^https://" }
+        }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "maxItems": 30,
+      "items": { "type": "string", "minLength": 2, "maxLength": 500 }
+    }
+  },
+  "$defs": {
+    "newsItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "summary",
+        "why_it_matters",
+        "apply_today",
+        "topic",
+        "score",
+        "source_name",
+        "source_url",
+        "source_date"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 3, "maxLength": 160 },
+        "title": { "type": "string", "minLength": 6, "maxLength": 240 },
+        "summary": { "type": "string", "minLength": 10, "maxLength": 900 },
+        "why_it_matters": { "type": "string", "minLength": 10, "maxLength": 700 },
+        "apply_today": { "type": "string", "minLength": 10, "maxLength": 700 },
+        "topic": { "type": "string", "minLength": 2, "maxLength": 80 },
+        "score": { "type": "integer", "minimum": 7, "maximum": 10 },
+        "source_name": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "source_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "source_date": { "type": "string", "format": "date" }
+      }
+    },
+    "repositoryItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "full_name",
+        "description",
+        "use_case",
+        "stars",
+        "forks",
+        "trending_stars_today",
+        "delta_24h",
+        "language",
+        "license",
+        "created_at",
+        "pushed_at",
+        "tracking_since",
+        "score",
+        "signals",
+        "source_url"
+      ],
+      "properties": {
+        "full_name": { "type": "string", "pattern": "^[^/\\s]+/[^/\\s]+$", "maxLength": 200 },
+        "description": { "type": "string", "minLength": 3, "maxLength": 900 },
+        "use_case": { "type": "string", "minLength": 10, "maxLength": 700 },
+        "stars": { "type": "integer", "minimum": 0 },
+        "forks": { "type": "integer", "minimum": 0 },
+        "trending_stars_today": { "type": "integer", "minimum": 0 },
+        "delta_24h": { "type": ["integer", "null"], "minimum": 0 },
+        "language": { "type": ["string", "null"], "maxLength": 80 },
+        "license": { "type": ["string", "null"], "maxLength": 80 },
+        "created_at": { "type": "string", "format": "date-time" },
+        "pushed_at": { "type": "string", "format": "date-time" },
+        "tracking_since": { "type": "string", "format": "date-time" },
+        "score": { "type": "integer", "minimum": 7, "maximum": 10 },
+        "signals": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": { "type": "string", "minLength": 2, "maxLength": 120 }
+        },
+        "source_url": { "type": "string", "format": "uri", "pattern": "^https://github.com/" }
+      }
+    }
+  }
+}
