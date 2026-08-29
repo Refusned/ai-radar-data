@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.0",
+  "run_key": "ai-radar:2026-08-29T07:30:00+04:00",
+  "attempt_id": "manual-expand-20260829T165814Z-001",
+  "generated_at": "2026-08-29T16:58:14Z",
+  "window_start": "2026-08-27T09:45:00Z",
+  "window_end": "2026-08-29T16:58:14Z",
+  "status": "complete",
+  "source_health": [
+    {
+      "source_key": "openai",
+      "label": "OpenAI News",
+      "status": "ok",
+      "detail": "Проверена официальная лента и подтвержденные публикации за окно выпуска."
+    },
+    {
+      "source_key": "anthropic",
+      "label": "Anthropic News and Research",
+      "status": "ok",
+      "detail": "Проверены официальные публикации об automated alignment researchers и Model Hardware Standard."
+    },
+    {
+      "source_key": "google-deepmind",
+      "label": "Google AI, DeepMind and Antigravity",
+      "status": "ok",
+      "detail": "Проверены официальные ленты Google AI и DeepMind, а также первоисточник обновления Teamwork."
+    },
+    {
+      "source_key": "microsoft-github",
+      "label": "Microsoft and GitHub",
+      "status": "ok",
+      "detail": "Проверены официальный Microsoft AI blog и GitHub Changelog за окно выпуска."
+    },
+    {
+      "source_key": "github-trending",
+      "label": "GitHub Trending daily",
+      "status": "ok",
+      "detail": "Проверены 20 дневных лидеров; stars today сохранены отдельно от собственной интервальной дельты."
+    },
+    {
+      "source_key": "github-api",
+      "label": "GitHub repository metadata",
+      "status": "ok",
+      "detail": "Для 15 проектов повторно получены stars, forks, язык, лицензия и дата последнего push через GitHub."
+    }
+  ],
+  "news_items": [
+    {
+      "id": "anthropic-automated-alignment-researchers-2026-08-28",
+      "title": "Anthropic показала автономный цикл исследований для снижения alignment failures",
+      "summary": "Claude автономно искал литературу, предлагал методы и данные, обучал модели и тестировал улучшения по десяти категориям alignment failures на публичных benchmark-наборах.",
+      "why_it_matters": "Это проверяемый образец длинного исследовательского цикла, в котором агент не только пишет отчет, но и итеративно улучшает измеримый результат.",
+      "apply_today": "Использовать структуру search-propose-test как шаблон для исследовательского агента, сохраняя отдельные критерии проверки и журнал неудачных гипотез.",
+      "topic": "research",
+      "score": 9,
+      "source_name": "Anthropic",
+      "source_url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+      "source_date": "2026-08-28"
+    },
+    {
+      "id": "google-antigravity-teamwork-2026-08-27",
+      "title": "Google Antigravity расширила Teamwork для долгих multi-agent задач",
+      "summary": "Teamwork организует агентов в динамические команды, где они предлагают, критикуют и уточняют решения в течение часов или дней; preview доступен на платных планах Antigravity.",
+      "why_it_matters": "Обновление показывает переход от одиночных агентных циклов к адаптивной оркестрации с конкурентным поиском, критиками и самопроверкой.",
+      "apply_today": "Проверить на одной сложной задаче схему генератор-критик-синтезатор и сравнить число найденных ошибок с одиночным проходом.",
+      "topic": "agents",
+      "score": 9,
+      "source_name": "Google Antigravity",
+      "source_url": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner",
+      "source_date": "2026-08-27"
+    },
+    {
+      "id": "anthropic-model-hardware-standard-2026-08-27",
+      "title": "Anthropic открыла research preview стандарта управления физическим оборудованием",
+      "summary": "Model Hardware Standard задает модель-независимый интерфейс для безопасного управления лабораторными и производственными устройствами через MCP, CLI и программные интерфейсы.",
+      "why_it_matters": "Стандартизация связи AI-агентов с оборудованием сокращает интеграцию с недель до часов и формирует новый слой для автономных лабораторий и производства.",
+      "apply_today": "В архитектурах агентов с внешними действиями выделить отдельный драйверный слой с командами read/write, ограничениями безопасности и явным состоянием устройства.",
+      "topic": "physical-ai",
+      "score": 8,
+      "source_name": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "source_date": "2026-08-27"
+    },
+    {
+      "id": "github-copilot-weekly-2026-08-28",
+      "title": "GitHub расширила Copilot общими агентными сессиями и единым слоем настройки",
+      "summary": "Обновление добавило общие агентные сессии из Slack и Teams, объединило MCP, плагины и skills во вкладке Customize и улучшило восстановление и настройку CLI-сессий.",
+      "why_it_matters": "Агентные функции смещаются из отдельных IDE в совместные командные процессы, где сессия, разрешения и расширения становятся переносимыми элементами рабочего контура.",
+      "apply_today": "Описать для одного рабочего процесса минимальный набор skills, разрешений и точек передачи контекста между чатом, CLI и репозиторием.",
+      "topic": "coding-agents",
+      "score": 8,
+      "source_name": "GitHub Changelog",
+      "source_url": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24/",
+      "source_date": "2026-08-28"
+    }
+  ],
+  "repositories": [
+    {
+      "full_name": "tt-a1i/archify",
+      "description": "Агентный навык для проверяемых архитектурных, workflow, sequence и data-flow диаграмм в самостоятельном HTML.",
+      "use_case": "Быстро превращать архитектуру клиентского агента в наглядную интерактивную схему для согласования и поиска точек отказа.",
+      "stars": 30223,
+      "forks": 1890,
+      "trending_stars_today": 3927,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-04-15T05:27:37Z",
+      "pushed_at": "2026-08-28T18:45:36Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 10,
+      "signals": [
+        "GitHub Trending daily",
+        "3 927 stars today",
+        "agent skill",
+        "architecture diagrams"
+      ],
+      "source_url": "https://github.com/tt-a1i/archify"
+    },
+    {
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "description": "Браузерный симулятор спутниковой разведки с фотограмметрическим глобусом, открытыми геоданными и голосовым AI-агентом.",
+      "use_case": "Изучить объединение разнородных live-источников на пространственном интерфейсе с явной маркировкой свежести и достоверности.",
+      "stars": 12199,
+      "forks": 2433,
+      "trending_stars_today": 1870,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "NOASSERTION",
+      "created_at": "2026-06-22T23:37:22Z",
+      "pushed_at": "2026-08-28T00:46:30Z",
+      "tracking_since": "2026-08-29T10:38:34Z",
+      "score": 10,
+      "signals": [
+        "GitHub Trending daily",
+        "1 870 stars today",
+        "live OSINT",
+        "voice agent"
+      ],
+      "source_url": "https://github.com/bilawalsidhu/gods-eye-view"
+    },
+    {
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "description": "Библиотека из 165 проверенных научных skills и подключений более чем к 100 специализированным базам для AI-агентов.",
+      "use_case": "Использовать структуру библиотеки как референс для упаковки отраслевых навыков с проверяемыми источниками и узкими сценариями.",
+      "stars": 37664,
+      "forks": 3558,
+      "trending_stars_today": 1604,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2025-10-19T20:54:15Z",
+      "pushed_at": "2026-08-29T13:57:33Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "1 604 stars today",
+        "agent skills",
+        "fresh commit"
+      ],
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+    },
+    {
+      "full_name": "DietrichGebert/ponytail",
+      "description": "Набор правил, который учит coding-агента сначала сокращать решение и избегать лишнего кода.",
+      "use_case": "Добавить как критический слой перед реализацией, чтобы агент искал более короткий путь и удалял необязательную сложность.",
+      "stars": 116198,
+      "forks": 6343,
+      "trending_stars_today": 1171,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-06-12T00:52:37Z",
+      "pushed_at": "2026-08-07T21:44:01Z",
+      "tracking_since": "2026-08-29T16:58:14Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "1 171 stars today",
+        "coding agents",
+        "simplicity guardrail"
+      ],
+      "source_url": "https://github.com/DietrichGebert/ponytail"
+    },
+    {
+      "full_name": "calesthio/OpenMontage",
+      "description": "Открытая агентная система видеопроизводства с 12 production pipelines, инструментами и библиотекой навыков.",
+      "use_case": "Проверить как основу для быстрого производства клиентских роликов и сборки повторяемых контентных конвейеров.",
+      "stars": 53867,
+      "forks": 6697,
+      "trending_stars_today": 809,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "AGPL-3.0",
+      "created_at": "2026-03-29T15:23:22Z",
+      "pushed_at": "2026-08-22T18:22:24Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "809 stars today",
+        "agentic video",
+        "production pipelines"
+      ],
+      "source_url": "https://github.com/calesthio/OpenMontage"
+    },
+    {
+      "full_name": "freestylefly/awesome-gpt-image-2",
+      "description": "Коллекция из сотен промптов, промпт-шаблонов и skills для GPT-Image 2, организованная как Prompt as Code.",
+      "use_case": "Использовать структуру как референс для версионирования и повторного применения промптов визуального производства.",
+      "stars": 24955,
+      "forks": 2449,
+      "trending_stars_today": 767,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-04-25T09:19:13Z",
+      "pushed_at": "2026-08-28T10:25:04Z",
+      "tracking_since": "2026-08-29T10:38:34Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "767 stars today",
+        "Prompt as Code",
+        "image skills"
+      ],
+      "source_url": "https://github.com/freestylefly/awesome-gpt-image-2"
+    },
+    {
+      "full_name": "tashfeenahmed/freellmapi",
+      "description": "Маршрутизатор для нескольких OpenAI-совместимых LLM-провайдеров с автоматическим переключением и единым endpoint.",
+      "use_case": "Изучить подход к маршрутизации и failover, отдельно проверив безопасность хранения ключей и условия каждого провайдера.",
+      "stars": 22097,
+      "forks": 3099,
+      "trending_stars_today": 612,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "MIT",
+      "created_at": "2026-04-21T13:38:59Z",
+      "pushed_at": "2026-08-28T00:05:52Z",
+      "tracking_since": "2026-08-29T16:58:14Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "612 stars today",
+        "LLM routing",
+        "automatic failover"
+      ],
+      "source_url": "https://github.com/tashfeenahmed/freellmapi"
+    },
+    {
+      "full_name": "abi/screenshot-to-code",
+      "description": "Инструмент преобразует скриншот интерфейса в HTML, Tailwind, React или Vue-код.",
+      "use_case": "Быстро получать рабочую основу интерфейса из референса, а затем вручную проверять структуру, доступность и адаптивность.",
+      "stars": 75921,
+      "forks": 9244,
+      "trending_stars_today": 558,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2023-11-14T17:53:32Z",
+      "pushed_at": "2026-08-14T17:20:50Z",
+      "tracking_since": "2026-08-29T16:58:14Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "558 stars today",
+        "screenshot to code",
+        "multi-framework"
+      ],
+      "source_url": "https://github.com/abi/screenshot-to-code"
+    },
+    {
+      "full_name": "rohitg00/ai-engineering-from-scratch",
+      "description": "Практическая учебная база по созданию, оценке и выпуску AI-систем с примерами реализации.",
+      "use_case": "Использовать как карту тем для закрытия пробелов в RAG, agents, evaluation и production-практиках.",
+      "stars": 50887,
+      "forks": 8810,
+      "trending_stars_today": 359,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-03-18T18:38:02Z",
+      "pushed_at": "2026-08-29T16:53:08Z",
+      "tracking_since": "2026-08-29T16:58:14Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "359 stars today",
+        "AI engineering",
+        "fresh commit"
+      ],
+      "source_url": "https://github.com/rohitg00/ai-engineering-from-scratch"
+    },
+    {
+      "full_name": "anthropics/claude-plugins-official",
+      "description": "Официальный каталог управляемых Anthropic плагинов высокого качества для Claude Code.",
+      "use_case": "Изучить упаковку, обнаружение и управление плагинами как референс для собственных библиотек агентных расширений.",
+      "stars": 35284,
+      "forks": 3951,
+      "trending_stars_today": 356,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2025-11-20T18:36:20Z",
+      "pushed_at": "2026-08-29T07:31:08Z",
+      "tracking_since": "2026-08-29T10:38:34Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "356 stars today",
+        "official Anthropic",
+        "plugins and skills"
+      ],
+      "source_url": "https://github.com/anthropics/claude-plugins-official"
+    },
+    {
+      "full_name": "JetBrains/go-modern-guidelines",
+      "description": "Компактные правила JetBrains, которые помогают coding-агентам писать современный Go.",
+      "use_case": "Взять структуру как шаблон для коротких language-specific инструкций в клиентских репозиториях.",
+      "stars": 2805,
+      "forks": 81,
+      "trending_stars_today": 294,
+      "delta_24h": null,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "created_at": "2025-11-24T12:46:31Z",
+      "pushed_at": "2026-08-29T13:27:49Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "294 stars today",
+        "coding agents",
+        "fresh commit"
+      ],
+      "source_url": "https://github.com/JetBrains/go-modern-guidelines"
+    },
+    {
+      "full_name": "abhigyanpatwari/GitNexus",
+      "description": "Браузерный knowledge graph и Graph RAG агент для исследования Git-репозиториев без отдельного сервера.",
+      "use_case": "Быстро разбирать незнакомые клиентские кодовые базы и показывать связи модулей без серверной инфраструктуры.",
+      "stars": 46345,
+      "forks": 5109,
+      "trending_stars_today": 273,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "NOASSERTION",
+      "created_at": "2025-08-02T23:20:31Z",
+      "pushed_at": "2026-08-29T16:57:15Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "273 stars today",
+        "Graph RAG",
+        "fresh commit"
+      ],
+      "source_url": "https://github.com/abhigyanpatwari/GitNexus"
+    },
+    {
+      "full_name": "livekit/agents",
+      "description": "Фреймворк LiveKit для создания realtime voice, video и multimodal AI-агентов.",
+      "use_case": "Собрать голосового агента с низкой задержкой, телефонией и управляемым pipeline распознавания, модели и синтеза речи.",
+      "stars": 13515,
+      "forks": 3644,
+      "trending_stars_today": 256,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2023-10-19T23:00:55Z",
+      "pushed_at": "2026-08-29T08:10:17Z",
+      "tracking_since": "2026-08-29T16:58:14Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "256 stars today",
+        "voice agents",
+        "realtime multimodal"
+      ],
+      "source_url": "https://github.com/livekit/agents"
+    },
+    {
+      "full_name": "ChromeDevTools/chrome-devtools-mcp",
+      "description": "Официальный MCP-сервер Chrome DevTools для управления и диагностики браузера coding-агентами.",
+      "use_case": "Автоматизировать проверку интерфейсов, производительности и сетевых ошибок через управляемый браузерный контур.",
+      "stars": 50112,
+      "forks": 3515,
+      "trending_stars_today": 215,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "created_at": "2025-09-11T10:39:55Z",
+      "pushed_at": "2026-08-28T12:24:25Z",
+      "tracking_since": "2026-08-29T16:58:14Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "215 stars today",
+        "official Chrome",
+        "MCP server"
+      ],
+      "source_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+    },
+    {
+      "full_name": "marin-community/marin",
+      "description": "Открытый фреймворк для исследований, обучения и оценки foundation models.",
+      "use_case": "Изучить воспроизводимую организацию экспериментов с данными, обучением и evaluation для исследовательских проектов.",
+      "stars": 2994,
+      "forks": 244,
+      "trending_stars_today": 163,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2024-03-22T06:29:42Z",
+      "pushed_at": "2026-08-29T16:52:38Z",
+      "tracking_since": "2026-08-29T16:58:14Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "163 stars today",
+        "foundation models",
+        "fresh commit"
+      ],
+      "source_url": "https://github.com/marin-community/marin"
+    }
+  ],
+  "daily_action": {
+    "title": "Сравнить одиночный и критический агентный проход",
+    "plan": "Взять одну сложную текущую задачу и выполнить ее дважды в Codex: сначала одним проходом, затем ролями генератор, критик и синтезатор. Зафиксировать одинаковые критерии качества и число найденных доработок.",
+    "expected_signal": "критический проход обнаружил хотя бы одну существенную ошибку или дал измеримо более полный результат без внешних платных действий",
+    "link": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner"
+  },
+  "corrections": [],
+  "errors": []
+}
