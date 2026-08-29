@@ -4,7 +4,14 @@
 
 `https://raw.githubusercontent.com/Refusned/ai-radar-data/main/schema/ai-radar-run.schema.json`
 
-## Верхний уровень
+## Manifest `latest.json`
+
+- `schema_version`: всегда `1.0`.
+- `current_snapshot`: относительный путь к текущему snapshot.
+- `generated_at`: время формирования указанного snapshot.
+- `status`: статус указанного snapshot.
+
+## Верхний уровень snapshot
 
 - `schema_version`: всегда `1.0`.
 - `run_key`: `ai-radar:<scheduled_for с часовым поясом>`.
@@ -32,7 +39,7 @@
 1. Создать snapshot.
 2. Убедиться чтением, что он доступен и соответствует `run_key`.
 3. Получить текущий SHA `latest.json`.
-4. Обновить `latest.json` полным содержимым и текущим SHA.
+4. Обновить manifest `latest.json` полями `schema_version`, `current_snapshot`, `generated_at` и `status`, передав текущий SHA.
 5. Перечитать manifest и snapshot.
 
 Если шаги 3-5 не завершены, старый `latest.json` остается источником истины.

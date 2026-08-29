@@ -9,14 +9,14 @@ description: "Ежедневно собирать проверенный вып�
 
 ## Выполнить запуск
 
-1. Прочитать `latest.json`, текущий snapshot и JSON Schema из `Refusned/ai-radar-data`.
+1. Прочитать manifest `latest.json`, затем указанный в `current_snapshot` snapshot и JSON Schema из `Refusned/ai-radar-data`.
 2. Рассчитать окно: первый запуск 48 часов; затем от конца последнего полного выпуска до текущего времени, максимум 72 часа.
 3. Проверить официальные релизы OpenAI, Anthropic, Google/DeepMind, Microsoft/GitHub, Meta AI, xAI, Mistral, NVIDIA и Hugging Face. Использовать Hacker News и другие площадки только как сигналы обнаружения.
 4. Проверить GitHub Trending за день, AI-topic search и репозитории из найденных релизов. Объединить кандидатов по `owner/repo`, максимум 30 до отбора.
 5. Оставить до 5 новостей и до 5 репозиториев. У каждого проверяемого факта сохранить прямой первоисточник и дату.
 6. Сформировать один JSON строго по [контракту выпуска](references/data-contract.md) и опубликованной JSON Schema.
-7. Сначала создать новый неизменяемый `snapshots/<timestamp>.json`. Только после успешной записи обновить `latest.json`.
-8. Перечитать оба файла и подтвердить, что `latest.json` указывает на созданный snapshot. При неизвестном исходе записи пометить результат `UNCERTAIN`, сверить состояние чтением и не повторять запись вслепую.
+7. Сначала создать новый неизменяемый `snapshots/<timestamp>.json`. Только после успешной записи обновить manifest `latest.json` с полями `schema_version`, `current_snapshot`, `generated_at` и `status`.
+8. Перечитать оба файла и подтвердить, что `latest.json.current_snapshot` указывает на созданный snapshot. При неизвестном исходе записи пометить результат `UNCERTAIN`, сверить состояние чтением и не повторять запись вслепую.
 
 ## Правила отбора
 
