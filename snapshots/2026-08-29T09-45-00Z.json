@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "run_key": "ai-radar:2026-08-29T07:30:00+04:00",
+  "attempt_id": "phase0-manual-001",
+  "generated_at": "2026-08-29T09:45:00Z",
+  "window_start": "2026-08-27T09:45:00Z",
+  "window_end": "2026-08-29T09:45:00Z",
+  "status": "partial",
+  "source_health": [
+    {
+      "source_key": "official",
+      "label": "Официальные релизы",
+      "status": "ok",
+      "detail": "Проверены первоисточники OpenAI, Anthropic и Google Antigravity"
+    },
+    {
+      "source_key": "github",
+      "label": "GitHub Trending",
+      "status": "ok",
+      "detail": "Зафиксированы карточки Trending и текущие метрики репозиториев"
+    },
+    {
+      "source_key": "hacker-news",
+      "label": "Hacker News",
+      "status": "partial",
+      "detail": "Канал не вошел в ручной Phase 0 запуск"
+    },
+    {
+      "source_key": "social",
+      "label": "Социальные сигналы",
+      "status": "unavailable",
+      "detail": "Reddit и X не настроены, данные не выдумывались"
+    }
+  ],
+  "news_items": [
+    {
+      "id": "openai-cursor-spacex-2026-08-28",
+      "title": "OpenAI прекратит поставлять модели в Cursor после покупки SpaceX",
+      "summary": "OpenAI уведомила SpaceX о планируемом завершении контракта с Cursor 12 ноября 2026 года и сообщила, что будущие модели OpenAI не будут поставляться в Cursor.",
+      "why_it_matters": "Команды, завязанные на модели OpenAI внутри Cursor, получают конкретный риск смены рабочего контура и должны заранее проверить альтернативы.",
+      "apply_today": "Зафиксировать, какие проекты критично зависят от Cursor + OpenAI, и проверить переносимость промптов и правил в Codex.",
+      "topic": "coding",
+      "score": 10,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+      "source_date": "2026-08-28"
+    },
+    {
+      "id": "anthropic-automated-alignment-researchers-2026-08-28",
+      "title": "Anthropic открыла harness для автоматизированного alignment research",
+      "summary": "Claude-агенты автономно искали методы обучения и улучшили метрики по десяти категориям alignment failures. Anthropic открыла исследовательский harness.",
+      "why_it_matters": "Это готовый пример длинного исследовательского цикла, где агент ищет литературу, предлагает метод, обучает и проверяет результат.",
+      "apply_today": "Изучить структуру harness как референс для автономных исследовательских агентов и проверяемых циклов улучшения.",
+      "topic": "research",
+      "score": 8,
+      "source_name": "Anthropic",
+      "source_url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+      "source_date": "2026-08-28"
+    },
+    {
+      "id": "google-antigravity-teamwork-2026-08-27",
+      "title": "Google Antigravity расширяет Teamwork для долгих multi-agent задач",
+      "summary": "Обновленный Teamwork позволяет агентам предлагать, критиковать и уточнять решения друг друга в течение часов или дней. Обновления выходят в /teamwork-preview.",
+      "why_it_matters": "Рынок движется от одиночного агента к управляемым командам агентов для исследований и разработки.",
+      "apply_today": "Сравнить orchestration-подход Teamwork с текущими Codex-процессами и забрать идеи контроля ролей и взаимной критики.",
+      "topic": "agents",
+      "score": 8,
+      "source_name": "Google Antigravity",
+      "source_url": "https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner",
+      "source_date": "2026-08-27"
+    }
+  ],
+  "repositories": [
+    {
+      "full_name": "tt-a1i/archify",
+      "description": "Навык агента для проверяемых архитектурных, workflow, sequence и data-flow диаграмм в самостоятельном HTML.",
+      "use_case": "Быстро превращать архитектуру клиентского агента в наглядную интерактивную схему для согласования.",
+      "stars": 28903,
+      "forks": 1814,
+      "trending_stars_today": 4562,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-04-15T05:27:37Z",
+      "pushed_at": "2026-08-28T18:45:36Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 10,
+      "signals": ["GitHub Trending", "4 562 stars today", "agent skills", "fresh commit"],
+      "source_url": "https://github.com/tt-a1i/archify"
+    },
+    {
+      "full_name": "calesthio/OpenMontage",
+      "description": "Открытая агентная система видеопроизводства с 12 production pipelines, инструментами и библиотекой навыков.",
+      "use_case": "Проверить как основу для быстрого производства клиентских роликов и контентных конвейеров.",
+      "stars": 53579,
+      "forks": 6672,
+      "trending_stars_today": 1144,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "AGPL-3.0",
+      "created_at": "2026-03-29T15:23:22Z",
+      "pushed_at": "2026-08-22T18:22:24Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 9,
+      "signals": ["GitHub Trending", "1 144 stars today", "agentic video"],
+      "source_url": "https://github.com/calesthio/OpenMontage"
+    },
+    {
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "description": "Библиотека из 163 проверенных научных навыков и подключений к специализированным базам для ИИ-агентов.",
+      "use_case": "Использовать структуру библиотеки как референс для упаковки отраслевых навыков собственных агентов.",
+      "stars": 37145,
+      "forks": 3525,
+      "trending_stars_today": 720,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2025-10-19T20:54:15Z",
+      "pushed_at": "2026-08-28T21:41:24Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 9,
+      "signals": ["GitHub Trending", "720 stars today", "agent skills", "fresh commit"],
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+    },
+    {
+      "full_name": "JetBrains/go-modern-guidelines",
+      "description": "Компактные правила, которые помогают coding-агентам писать современный Go.",
+      "use_case": "Взять структуру как шаблон для коротких language-specific инструкций в клиентских репозиториях.",
+      "stars": 2697,
+      "forks": 79,
+      "trending_stars_today": 574,
+      "delta_24h": null,
+      "language": "Go",
+      "license": "Apache-2.0",
+      "created_at": "2025-11-24T12:46:31Z",
+      "pushed_at": "2026-08-19T17:39:58Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 8,
+      "signals": ["GitHub Trending", "574 stars today", "coding agents"],
+      "source_url": "https://github.com/JetBrains/go-modern-guidelines"
+    },
+    {
+      "full_name": "abhigyanpatwari/GitNexus",
+      "description": "Браузерный knowledge graph и Graph RAG агент для исследования Git-репозиториев без отдельного сервера.",
+      "use_case": "Быстро разбирать незнакомые клиентские кодовые базы и показывать связи модулей без серверной инфраструктуры.",
+      "stars": 46251,
+      "forks": 5107,
+      "trending_stars_today": 202,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": null,
+      "created_at": "2025-08-02T23:20:31Z",
+      "pushed_at": "2026-08-29T08:56:31Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 8,
+      "signals": ["GitHub Trending", "202 stars today", "Graph RAG", "fresh commit"],
+      "source_url": "https://github.com/abhigyanpatwari/GitNexus"
+    }
+  ],
+  "daily_action": {
+    "title": "Прогнать Archify на архитектуре одного текущего агента",
+    "plan": "Выбрать один реальный проект, построить data-flow диаграмму и проверить, помогает ли она быстрее увидеть внешние write-действия, точки отказа и границы ответственности.",
+    "expected_signal": "схема выявила хотя бы одну неочевидную зависимость или сократила время объяснения проекта",
+    "link": "https://github.com/tt-a1i/archify"
+  },
+  "corrections": [],
+  "errors": [
+    "Hacker News не проверен в ручном Phase 0 запуске",
+    "Социальные источники не настроены и не использовались"
+  ]
+}
