@@ -20,7 +20,7 @@
 - `status`: `complete`, `partial` или `failed`.
 - `source_health[]`: состояние каждого обязательного канала.
 - `news_items[0..5]`.
-- `repositories[0..5]`.
+- `repositories[0..15]`; целевой ежедневный выпуск содержит 12-15 подтвержденных проектов.
 - `daily_action`: один проверяемый эксперимент или `null`.
 - `corrections[]`, `errors[]`.
 
