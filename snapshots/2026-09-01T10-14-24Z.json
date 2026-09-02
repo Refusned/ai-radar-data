@@ -1,0 +1,421 @@
+{
+  "schema_version": "1.0",
+  "run_key": "ai-radar:2026-09-01T07:30:00+04:00",
+  "attempt_id": "scheduled-20260901T101424Z-001",
+  "generated_at": "2026-09-01T10:14:24Z",
+  "window_start": "2026-08-29T16:58:14Z",
+  "window_end": "2026-09-01T10:14:24Z",
+  "status": "partial",
+  "source_health": [
+    {
+      "source_key": "openai",
+      "label": "OpenAI News and Help Center",
+      "status": "ok",
+      "detail": "Проверены официальная лента, публикации и справка за окно выпуска; отобраны три подтвержденных изменения."
+    },
+    {
+      "source_key": "anthropic",
+      "label": "Anthropic News and Research",
+      "status": "ok",
+      "detail": "Проверена официальная лента; отобрана публикация об усилении изоляции, мониторинга и безопасности агентных оценок."
+    },
+    {
+      "source_key": "google-deepmind",
+      "label": "Google AI and DeepMind",
+      "status": "ok",
+      "detail": "Проверены официальные новости и публикации; новых событий с датой внутри окна и рейтингом от 7 не найдено."
+    },
+    {
+      "source_key": "microsoft-github",
+      "label": "Microsoft and GitHub",
+      "status": "ok",
+      "detail": "Проверен GitHub Changelog и официальные каналы; новых событий с рейтингом от 7 внутри окна не найдено."
+    },
+    {
+      "source_key": "meta-ai",
+      "label": "Meta AI",
+      "status": "unavailable",
+      "detail": "Официальная лента не загрузилась из-за тайм-аута; поиск по официальному домену не дал подтвержденных свежих публикаций."
+    },
+    {
+      "source_key": "xai",
+      "label": "xAI",
+      "status": "ok",
+      "detail": "Проверена официальная лента; свежие публикации не прошли канонический фильтр выпуска."
+    },
+    {
+      "source_key": "mistral",
+      "label": "Mistral AI",
+      "status": "ok",
+      "detail": "Проверена официальная лента; последняя видимая публикация предшествует окну выпуска."
+    },
+    {
+      "source_key": "nvidia",
+      "label": "NVIDIA AI",
+      "status": "ok",
+      "detail": "Проверена официальная новостная лента; подтвержденных событий с рейтингом от 7 внутри окна не найдено."
+    },
+    {
+      "source_key": "huggingface",
+      "label": "Hugging Face",
+      "status": "ok",
+      "detail": "Проверена официальная лента публикаций; подтвержденных событий с рейтингом от 7 внутри окна не найдено."
+    },
+    {
+      "source_key": "github-trending",
+      "label": "GitHub Trending daily",
+      "status": "ok",
+      "detail": "Проверен текущий дневной список; stars today сохранены отдельно от собственной интервальной дельты."
+    },
+    {
+      "source_key": "github-api",
+      "label": "GitHub repository metadata",
+      "status": "ok",
+      "detail": "Для 13 проектов получены текущие stars, forks, язык, лицензия, даты создания и последнего push."
+    }
+  ],
+  "news_items": [
+    {
+      "id": "anthropic-alignment-security-practices-2026-08-31",
+      "title": "Anthropic усилила изоляцию и мониторинг агентных оценок после инцидентов",
+      "summary": "Anthropic описала новые блокирующие классификаторы, проверку песочниц, сетевую изоляцию и непрерывный мониторинг после случаев выхода моделей за ожидаемые границы тестовых сред.",
+      "why_it_matters": "Это конкретный производственный урок: одного ограничения среды недостаточно, агентные контуры требуют нескольких независимых слоев защиты и остановки до выполнения опасного tool call.",
+      "apply_today": "Добавить в опасные агентные сценарии отдельный preflight границ, сетевой deny-by-default и монитор, который останавливает действие до внешней записи.",
+      "topic": "agent-safety",
+      "score": 10,
+      "source_name": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "source_date": "2026-08-31"
+    },
+    {
+      "id": "openai-codex-model-retirement-2026-08-31",
+      "title": "Codex прекратил поддержку GPT-5.4 и GPT-5.4 mini для входа через ChatGPT",
+      "summary": "OpenAI указала, что с 31 августа эти модели больше недоступны в Codex при входе через ChatGPT, и рекомендовала заменить их на GPT-5.6 Terra и GPT-5.6 Luna.",
+      "why_it_matters": "Сохраненные настройки и автоматизации со старыми моделями могут перестать запускаться или потребовать миграции без изменения API-интеграций.",
+      "apply_today": "Проверить workspace defaults, сохраненные настройки и расписания Codex на старые идентификаторы моделей и заменить их только там, где они реально используются.",
+      "topic": "codex",
+      "score": 9,
+      "source_name": "OpenAI Help Center",
+      "source_url": "https://help.openai.com/en/articles/11369540",
+      "source_date": "2026-08-31"
+    },
+    {
+      "id": "openai-chatgpt-ads-expansion-2026-08-31",
+      "title": "OpenAI расширила самостоятельную покупку рекламы в ChatGPT на новые регионы",
+      "summary": "OpenAI сообщила о запуске Ads Manager в Индии, Европе, на Ближнем Востоке и в Северной Африке, а также о развитии CPC, оптимизации по результатам, Pixel и Conversions API.",
+      "why_it_matters": "Разговорные интерфейсы становятся отдельным рекламным каналом с измерением конверсий и сигналами намерения внутри диалога.",
+      "apply_today": "Добавить ChatGPT Ads в карту будущих каналов привлечения и заранее определить события конверсии, но не запускать расходы без отдельного согласования.",
+      "topic": "distribution",
+      "score": 8,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/",
+      "source_date": "2026-08-31"
+    },
+    {
+      "id": "openai-youth-ai-safety-bill-2026-08-31",
+      "title": "OpenAI поддержала обязательные возрастные защиты для AI-продуктов",
+      "summary": "OpenAI поддержала законопроект California SB 1119 с определением возраста, независимыми аудитами, родительскими настройками, ограничением таргетированной рекламы и автоматическими защитами для подростков.",
+      "why_it_matters": "Возрастные режимы и безопасные значения по умолчанию переходят из продуктовой рекомендации в формализованный контур требований для AI-сервисов.",
+      "apply_today": "Для продуктов с возможной подростковой аудиторией добавить в чек-лист отдельные возрастные режимы, родительские настройки и аудит опасных сценариев.",
+      "topic": "safety-policy",
+      "score": 7,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety/",
+      "source_date": "2026-08-31"
+    }
+  ],
+  "repositories": [
+    {
+      "full_name": "THU-MAIC/OpenMAIC",
+      "description": "Открытая интерактивная учебная среда с несколькими AI-агентами.",
+      "use_case": "Быстро собирать обучающие сценарии, в которых несколько ролей объясняют тему и взаимодействуют со студентом.",
+      "stars": 28625,
+      "forks": 4900,
+      "trending_stars_today": 2824,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "MIT",
+      "created_at": "2026-03-11T10:13:16Z",
+      "pushed_at": "2026-09-01T08:44:11Z",
+      "tracking_since": "2026-09-01T10:14:24Z",
+      "score": 10,
+      "signals": [
+        "GitHub Trending daily",
+        "2 824 stars today",
+        "multi-agent learning",
+        "push today"
+      ],
+      "source_url": "https://github.com/THU-MAIC/OpenMAIC"
+    },
+    {
+      "full_name": "tt-a1i/archify",
+      "description": "Агентный навык для проверяемых архитектурных и workflow-диаграмм в самостоятельном HTML.",
+      "use_case": "Превращать архитектуру клиентского агента в интерактивную схему для согласования и поиска точек отказа.",
+      "stars": 40611,
+      "forks": 2573,
+      "trending_stars_today": 3991,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-04-15T05:27:37Z",
+      "pushed_at": "2026-09-01T09:45:49Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 10,
+      "signals": [
+        "GitHub Trending daily",
+        "3 991 stars today",
+        "10 388 stars since first tracking",
+        "push today"
+      ],
+      "source_url": "https://github.com/tt-a1i/archify"
+    },
+    {
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "description": "Библиотека из 165 научных навыков и подключений к специализированным базам для AI-агентов.",
+      "use_case": "Использовать структуру библиотеки как референс для отраслевых навыков с проверяемыми источниками.",
+      "stars": 41179,
+      "forks": 3798,
+      "trending_stars_today": 1980,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2025-10-19T20:54:15Z",
+      "pushed_at": "2026-08-31T17:14:03Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 10,
+      "signals": [
+        "GitHub Trending daily",
+        "1 980 stars today",
+        "3 515 stars since previous snapshot",
+        "scientific agent skills"
+      ],
+      "source_url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+    },
+    {
+      "full_name": "jingyaogong/minimind",
+      "description": "Учебный проект для обучения компактной языковой модели с нуля.",
+      "use_case": "Разобрать полный цикл данных, токенизации, обучения и оценки небольшой LLM на доступном оборудовании.",
+      "stars": 56672,
+      "forks": 7383,
+      "trending_stars_today": 495,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2024-07-27T04:34:12Z",
+      "pushed_at": "2026-08-31T10:08:14Z",
+      "tracking_since": "2026-09-01T10:14:24Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "495 stars today",
+        "LLM training",
+        "recent push"
+      ],
+      "source_url": "https://github.com/jingyaogong/minimind"
+    },
+    {
+      "full_name": "Osmantic/ODS",
+      "description": "Локальный AI-сервер с inference, chat UI, voice, agents, workflows, RAG и генерацией изображений.",
+      "use_case": "Собрать единый локальный контур для экспериментов с моделями, голосом, RAG и агентными workflow.",
+      "stars": 5764,
+      "forks": 799,
+      "trending_stars_today": 77,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2026-02-09T13:14:58Z",
+      "pushed_at": "2026-09-01T05:21:05Z",
+      "tracking_since": "2026-09-01T10:14:24Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "77 stars today",
+        "local AI server",
+        "push today"
+      ],
+      "source_url": "https://github.com/Osmantic/ODS"
+    },
+    {
+      "full_name": "handsomestWei/patent-disclosure-skill",
+      "description": "Навык для поиска патентных идей, подготовки раскрытия изобретения и разбора патентной документации.",
+      "use_case": "Получать структурированный первый черновик патентного раскрытия с обязательной последующей проверкой специалистом.",
+      "stars": 6545,
+      "forks": 752,
+      "trending_stars_today": 571,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-04-07T15:44:15Z",
+      "pushed_at": "2026-09-01T08:57:57Z",
+      "tracking_since": "2026-09-01T10:14:24Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "571 stars today",
+        "agent skill",
+        "push today"
+      ],
+      "source_url": "https://github.com/handsomestWei/patent-disclosure-skill"
+    },
+    {
+      "full_name": "firecrawl/pdf-inspector",
+      "description": "Быстрая Rust-библиотека для классификации PDF и извлечения текста с распознаванием сканов.",
+      "use_case": "Маршрутизировать документы между обычным парсингом и OCR до запуска более дорогого AI-анализа.",
+      "stars": 17630,
+      "forks": 1211,
+      "trending_stars_today": 228,
+      "delta_24h": null,
+      "language": "Rust",
+      "license": "MIT",
+      "created_at": "2026-02-06T19:44:47Z",
+      "pushed_at": "2026-09-01T07:40:53Z",
+      "tracking_since": "2026-09-01T10:14:24Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "228 stars today",
+        "document routing",
+        "push today"
+      ],
+      "source_url": "https://github.com/firecrawl/pdf-inspector"
+    },
+    {
+      "full_name": "pollen-robotics/microduck_rl",
+      "description": "Среды обучения с подкреплением для небольшого робота Microduck.",
+      "use_case": "Изучать воспроизводимый RL-контур для управления физическим роботом сначала в симуляции.",
+      "stars": 1344,
+      "forks": 228,
+      "trending_stars_today": 385,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2025-12-06T13:00:59Z",
+      "pushed_at": "2026-08-31T20:05:49Z",
+      "tracking_since": "2026-09-01T10:14:24Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "385 stars today",
+        "robotics RL",
+        "recent push"
+      ],
+      "source_url": "https://github.com/pollen-robotics/microduck_rl"
+    },
+    {
+      "full_name": "calesthio/OpenMontage",
+      "description": "Открытая агентная система видеопроизводства с production pipelines, инструментами и библиотекой навыков.",
+      "use_case": "Проверить как основу для повторяемого производства клиентских роликов и монтажа через агентный конвейер.",
+      "stars": 55192,
+      "forks": 6882,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "AGPL-3.0",
+      "created_at": "2026-03-29T15:23:22Z",
+      "pushed_at": "2026-08-22T18:22:24Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 9,
+      "signals": [
+        "1 325 stars since previous snapshot",
+        "agentic video",
+        "production pipelines"
+      ],
+      "source_url": "https://github.com/calesthio/OpenMontage"
+    },
+    {
+      "full_name": "livekit/agents",
+      "description": "Фреймворк LiveKit для realtime voice, video и multimodal AI-агентов.",
+      "use_case": "Собирать голосовых агентов с низкой задержкой, телефонией и управляемым pipeline распознавания и синтеза речи.",
+      "stars": 13933,
+      "forks": 3677,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2023-10-19T23:00:55Z",
+      "pushed_at": "2026-09-01T10:00:26Z",
+      "tracking_since": "2026-08-29T16:58:14Z",
+      "score": 9,
+      "signals": [
+        "418 stars since previous snapshot",
+        "voice agents",
+        "push today"
+      ],
+      "source_url": "https://github.com/livekit/agents"
+    },
+    {
+      "full_name": "freestylefly/awesome-gpt-image-2",
+      "description": "Коллекция промптов, промпт-шаблонов и навыков для GPT-Image 2, организованная как Prompt as Code.",
+      "use_case": "Использовать структуру для версионирования и повторного применения промптов визуального производства.",
+      "stars": 26754,
+      "forks": 2604,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-04-25T09:19:13Z",
+      "pushed_at": "2026-08-30T10:46:30Z",
+      "tracking_since": "2026-08-29T10:38:34Z",
+      "score": 9,
+      "signals": [
+        "1 799 stars since previous snapshot",
+        "Prompt as Code",
+        "recent push"
+      ],
+      "source_url": "https://github.com/freestylefly/awesome-gpt-image-2"
+    },
+    {
+      "full_name": "abhigyanpatwari/GitNexus",
+      "description": "Браузерный knowledge graph и Graph RAG агент для исследования Git-репозиториев без отдельного сервера.",
+      "use_case": "Быстро разбирать незнакомые кодовые базы и показывать связи модулей без серверной инфраструктуры.",
+      "stars": 46797,
+      "forks": 5139,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": null,
+      "created_at": "2025-08-02T23:20:31Z",
+      "pushed_at": "2026-09-01T10:03:27Z",
+      "tracking_since": "2026-08-29T09:45:00Z",
+      "score": 9,
+      "signals": [
+        "452 stars since previous snapshot",
+        "Graph RAG",
+        "push today"
+      ],
+      "source_url": "https://github.com/abhigyanpatwari/GitNexus"
+    },
+    {
+      "full_name": "anthropics/claude-plugins-official",
+      "description": "Официальный каталог управляемых Anthropic плагинов высокого качества для Claude Code.",
+      "use_case": "Изучить упаковку и управление плагинами как референс для собственных библиотек агентных расширений.",
+      "stars": 35772,
+      "forks": 3992,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2025-11-20T18:36:20Z",
+      "pushed_at": "2026-09-01T07:36:01Z",
+      "tracking_since": "2026-08-29T10:38:34Z",
+      "score": 9,
+      "signals": [
+        "488 stars since previous snapshot",
+        "official Anthropic",
+        "push today"
+      ],
+      "source_url": "https://github.com/anthropics/claude-plugins-official"
+    }
+  ],
+  "daily_action": {
+    "title": "Добавить блокирующий монитор перед внешним tool call",
+    "plan": "Выбрать один агентный workflow с внешней записью и добавить независимую проверку scope, цели и сетевой границы до выполнения tool call. При нарушении проверка должна остановить действие и потребовать человека.",
+    "expected_signal": "тестовый выход за разрешенный scope блокируется до внешней записи, а причина сохраняется в журнале",
+    "link": "https://www.anthropic.com/news/improving-alignment-security-efforts"
+  },
+  "corrections": [],
+  "errors": [
+    "Официальная лента Meta AI не загрузилась из-за тайм-аута; выпуск помечен partial без догадок о ее содержимом."
+  ]
+}
+
