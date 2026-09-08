@@ -1,0 +1,461 @@
+{
+  "schema_version": "1.0",
+  "run_key": "ai-radar:2026-09-08T07:30:00+04:00",
+  "attempt_id": "57350bfc-5714-4bc2-b28f-8ae847ee3e18",
+  "generated_at": "2026-09-08T04:34:33Z",
+  "window_start": "2026-09-06T07:08:20Z",
+  "window_end": "2026-09-08T04:34:33Z",
+  "status": "complete",
+  "source_health": [
+    {
+      "source_key": "openai",
+      "label": "OpenAI News",
+      "status": "ok",
+      "detail": "Проверена официальная лента; отобраны две публикации от 6 сентября об автоматизации исследований и безопасности сильных моделей."
+    },
+    {
+      "source_key": "anthropic",
+      "label": "Anthropic Newsroom",
+      "status": "ok",
+      "detail": "Проверена официальная лента; последняя видимая публикация датирована 1 сентября, новых событий внутри окна нет."
+    },
+    {
+      "source_key": "google-deepmind",
+      "label": "Google AI and DeepMind",
+      "status": "ok",
+      "detail": "Проверены официальные ленты; отобраны испытание AI для снижения следов конденсации и программа для 16 экологических организаций."
+    },
+    {
+      "source_key": "microsoft-github",
+      "label": "Microsoft and GitHub",
+      "status": "ok",
+      "detail": "Проверен GitHub Changelog; последняя видимая публикация датирована 4 сентября, новых событий внутри окна нет."
+    },
+    {
+      "source_key": "meta-ai",
+      "label": "Meta AI",
+      "status": "ok",
+      "detail": "Официальная лента загрузилась; новых событий внутри окна с рейтингом от 7 не найдено."
+    },
+    {
+      "source_key": "xai",
+      "label": "xAI",
+      "status": "ok",
+      "detail": "Проверена официальная лента; свежих публикаций, прошедших критерии текущего выпуска, не найдено."
+    },
+    {
+      "source_key": "mistral",
+      "label": "Mistral AI",
+      "status": "ok",
+      "detail": "Проверена официальная лента; последняя видимая публикация датирована 24 августа и предшествует окну выпуска."
+    },
+    {
+      "source_key": "nvidia",
+      "label": "NVIDIA AI",
+      "status": "ok",
+      "detail": "Проверена официальная лента; последние релизы датированы 3 сентября и предшествуют текущему окну."
+    },
+    {
+      "source_key": "huggingface",
+      "label": "Hugging Face Blog",
+      "status": "ok",
+      "detail": "Проверена официальная лента; новых самостоятельных событий внутри окна с рейтингом от 7 не найдено."
+    },
+    {
+      "source_key": "github-trending",
+      "label": "GitHub Trending daily",
+      "status": "ok",
+      "detail": "Проверен дневной список из 14 репозиториев и расширенный AI-поиск; отобраны 15 проектов, из них 9 находятся в Trending."
+    },
+    {
+      "source_key": "github-api",
+      "label": "GitHub repository metadata",
+      "status": "ok",
+      "detail": "Для 15 проектов получены stars, forks, язык, лицензия, даты и история stars; архивных и отключенных репозиториев нет."
+    }
+  ],
+  "news_items": [
+    {
+      "id": "openai-automated-research-intern-2026-09-06",
+      "title": "OpenAI сообщила об автоматизированном исследовательском стажере",
+      "summary": "OpenAI описала внутренний рубеж: исследовательский агент выполняет четко заданные задачи, которые у квалифицированного специалиста занимают несколько дней. Компания называет результат предварительным и сохраняет за людьми выбор приоритетов и решений о внедрении.",
+      "why_it_matters": "Агентные системы переходят от помощи с отдельными шагами к длинным исследовательским циклам. При этом заявление основано на внутренней оценке и пока не подтверждает универсальную автономность.",
+      "apply_today": "Дать агенту одну ограниченную задачу по открытым источникам, заранее записать критерии приемки и провести человеческую проверку каждого вывода.",
+      "topic": "research-agents",
+      "score": 10,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/research-acceleration-view-inside-openai/",
+      "source_date": "2026-09-06"
+    },
+    {
+      "id": "openai-alien-mind-safety-2026-09-06",
+      "title": "OpenAI обозначила ограничения контроля сильных моделей",
+      "summary": "Главный научный сотрудник OpenAI пишет, что согласование поведения и мониторинг остаются нерешенными задачами, а уверенность в наблюдении за цепочками рассуждений может снижаться по мере роста возможностей систем.",
+      "why_it_matters": "Рост автономности без надежного мониторинга повышает риск незаметных ошибок и действий вне намерения оператора. Автор предлагает сохранять человеческий контроль, пороги безопасности и возможность замедления.",
+      "apply_today": "Проверить один автономный процесс: права инструментов, полноту журнала, обнаружение нарушений и однозначное условие остановки до любых внешних действий.",
+      "topic": "ai-safety",
+      "score": 9,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/an-alien-mind/",
+      "source_date": "2026-09-06"
+    },
+    {
+      "id": "google-ai-contrail-trial-2026-09-07",
+      "title": "Google и Cathay Pacific испытали AI для снижения потепления от следов самолетов",
+      "summary": "Google сообщила о более чем 80 испытательных дальнемагистральных рейсах с AI-рекомендациями по обходу зон образования конденсационных следов. Предварительная оценка показала около 40% снижения их влияния на потепление.",
+      "why_it_matters": "Это редкий пример AI в физическом операционном процессе с измеримым климатическим показателем и участием человека. Результат пока относится к испытанию, а не к доказанному эффекту всей отрасли.",
+      "apply_today": "Использовать кейс как шаблон: выбрать один измеримый KPI, оставить решение человеку и заранее определить безопасный контрольный сценарий без вмешательства в авиационные операции.",
+      "topic": "climate-ai",
+      "score": 9,
+      "source_name": "Google",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-research/contrail-avoidance-ultra-long-haul-flights/",
+      "source_date": "2026-09-07"
+    },
+    {
+      "id": "google-ai-planet-accelerator-apac-2026-09-07",
+      "title": "Google выбрала 16 организаций для экологического AI-акселератора в APAC",
+      "summary": "Google DeepMind запустила трехмесячную программу для 16 организаций из Азиатско-Тихоокеанского региона. Участники получат наставничество и доступ к AI-инструментам для задач биоразнообразия, сельского хозяйства и углерода.",
+      "why_it_matters": "Программа показывает конкретные направления, где экологические AI-проекты получают поддержку и должны связывать модель с наблюдаемым результатом, а не только с демонстрацией технологии.",
+      "apply_today": "Сопоставить один свой проект с задачами природы, сельского хозяйства или углерода и сформулировать один проверяемый показатель пользы до выбора модели.",
+      "topic": "climate-ai",
+      "score": 7,
+      "source_name": "Google DeepMind",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-planet-accelerator-apac/",
+      "source_date": "2026-09-07"
+    }
+  ],
+  "repositories": [
+    {
+      "full_name": "heygen-com/hyperframes",
+      "description": "Открытый фреймворк для программного создания и рендеринга видео с React и TypeScript.",
+      "use_case": "Собирать воспроизводимые видео из компонентов, данных и шаблонов для маркетинговых и продуктовых материалов.",
+      "stars": 46407,
+      "forks": 4341,
+      "trending_stars_today": 474,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "created_at": "2026-03-10T01:51:06Z",
+      "pushed_at": "2026-09-08T01:28:01Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 10,
+      "signals": [
+        "GitHub Trending daily",
+        "474 stars today",
+        "1897 stars в последнем полном дне Star History API",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/heygen-com/hyperframes"
+    },
+    {
+      "full_name": "microsoft/markitdown",
+      "description": "Утилита Microsoft для преобразования документов и других файлов в Markdown.",
+      "use_case": "Нормализовать PDF, презентации, таблицы и офисные документы перед индексированием, поиском или анализом агентом.",
+      "stars": 180604,
+      "forks": 13276,
+      "trending_stars_today": 886,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2024-11-13T19:56:40Z",
+      "pushed_at": "2026-09-07T04:58:15Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 10,
+      "signals": [
+        "GitHub Trending daily",
+        "886 stars today",
+        "1594 stars в последнем полном дне Star History API"
+      ],
+      "source_url": "https://github.com/microsoft/markitdown"
+    },
+    {
+      "full_name": "jo-inc/camofox-browser",
+      "description": "Программно управляемый браузерный рантайм для автоматизации и агентных сценариев.",
+      "use_case": "Тестировать разрешенные браузерные процессы в контролируемой среде с соблюдением правил сайта и ограничений доступа.",
+      "stars": 9882,
+      "forks": 1029,
+      "trending_stars_today": 135,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-01-26T07:31:13Z",
+      "pushed_at": "2026-09-06T03:30:20Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "135 stars today",
+        "627 stars в последнем полном дне Star History API"
+      ],
+      "source_url": "https://github.com/jo-inc/camofox-browser"
+    },
+    {
+      "full_name": "coreyhaines31/marketingskills",
+      "description": "Набор прикладных навыков и шаблонов для маркетинговых задач AI-агентов.",
+      "use_case": "Стандартизировать исследование аудитории, позиционирование, контент и проверку маркетинговых материалов.",
+      "stars": 48260,
+      "forks": 7449,
+      "trending_stars_today": 580,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-01-15T19:45:23Z",
+      "pushed_at": "2026-09-05T04:48:10Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "580 stars today",
+        "579 stars в последнем полном дне Star History API"
+      ],
+      "source_url": "https://github.com/coreyhaines31/marketingskills"
+    },
+    {
+      "full_name": "The-Swarm-Corporation/AutoHedge",
+      "description": "Многоагентная исследовательская система для анализа рынков и инвестиционных гипотез.",
+      "use_case": "Изучать координацию финансовых агентов только на синтетических данных или в режиме paper trading без реальных денег.",
+      "stars": 5339,
+      "forks": 818,
+      "trending_stars_today": 517,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2024-12-10T20:34:46Z",
+      "pushed_at": "2026-05-11T05:44:09Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "517 stars today",
+        "463 stars в последнем полном дне Star History API"
+      ],
+      "source_url": "https://github.com/The-Swarm-Corporation/AutoHedge"
+    },
+    {
+      "full_name": "bytedance/deer-flow",
+      "description": "Открытая агентная платформа ByteDance для исследований, генерации контента и выполнения длинных задач.",
+      "use_case": "Прототипировать проверяемые многошаговые исследования с инструментами, памятью и явной проверкой результата человеком.",
+      "stars": 81910,
+      "forks": 11295,
+      "trending_stars_today": 195,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2025-05-07T02:50:19Z",
+      "pushed_at": "2026-09-08T02:50:03Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "195 stars today",
+        "269 stars в последнем полном дне Star History API",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/bytedance/deer-flow"
+    },
+    {
+      "full_name": "openai/skills",
+      "description": "Официальный публичный каталог навыков OpenAI для агентных рабочих процессов.",
+      "use_case": "Изучать формат переносимых инструкций и сверять собственные навыки с официальными примерами OpenAI.",
+      "stars": 26122,
+      "forks": 1752,
+      "trending_stars_today": 351,
+      "delta_24h": null,
+      "language": "Python",
+      "license": null,
+      "created_at": "2025-11-25T06:25:42Z",
+      "pushed_at": "2026-07-14T16:47:46Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "351 stars today",
+        "413 stars в последнем полном дне Star History API",
+        "официальный репозиторий OpenAI"
+      ],
+      "source_url": "https://github.com/openai/skills"
+    },
+    {
+      "full_name": "lightpanda-io/browser",
+      "description": "Быстрый браузерный движок без графического интерфейса для автоматизации и AI-агентов.",
+      "use_case": "Ускорять разрешенный сбор страниц и тесты веб-процессов в изолированной среде с контролем сетевых правил.",
+      "stars": 34949,
+      "forks": 1652,
+      "trending_stars_today": 58,
+      "delta_24h": null,
+      "language": "Zig",
+      "license": "AGPL-3.0",
+      "created_at": "2023-02-07T15:19:34Z",
+      "pushed_at": "2026-09-08T04:24:52Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "58 stars today",
+        "348 stars в последнем полном дне Star History API",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/lightpanda-io/browser"
+    },
+    {
+      "full_name": "ruvnet/ruflo",
+      "description": "Мета-рантайм для координации многоагентных процессов, памяти, RAG и автономных рабочих циклов.",
+      "use_case": "Прототипировать управляемые группы агентов с общей памятью, маршрутизацией задач и наблюдаемыми этапами выполнения.",
+      "stars": 71456,
+      "forks": 8461,
+      "trending_stars_today": 394,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "MIT",
+      "created_at": "2025-06-02T21:24:20Z",
+      "pushed_at": "2026-09-08T00:11:17Z",
+      "tracking_since": "2026-09-06T07:08:20Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "394 stars today",
+        "363 stars в последнем полном дне Star History API",
+        "собственный рост +693 после прошлого полного выпуска",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/ruvnet/ruflo"
+    },
+    {
+      "full_name": "NousResearch/hermes-agent",
+      "description": "Расширяемый персональный агент с инструментами, памятью и длительными рабочими сессиями.",
+      "use_case": "Собирать локальные или серверные агентные процессы с сохраняемым контекстом, инструментами и переиспользуемыми навыками.",
+      "stars": 243110,
+      "forks": 50063,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2025-07-22T22:22:28Z",
+      "pushed_at": "2026-09-08T04:27:09Z",
+      "tracking_since": "2026-09-03T09:26:21Z",
+      "score": 10,
+      "signals": [
+        "GitHub AI topic search",
+        "449 stars в последнем полном дне Star History API",
+        "собственный рост +984 после прошлого полного выпуска",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/NousResearch/hermes-agent"
+    },
+    {
+      "full_name": "superset-sh/superset",
+      "description": "Агентная среда разработки для параллельной координации множества coding-агентов.",
+      "use_case": "Организовать параллельные задачи разработки с отдельными исполнителями и единым обзором их состояния и результатов.",
+      "stars": 13891,
+      "forks": 1253,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "NOASSERTION",
+      "created_at": "2025-10-21T09:16:51Z",
+      "pushed_at": "2026-09-08T04:24:31Z",
+      "tracking_since": "2026-09-06T07:08:20Z",
+      "score": 8,
+      "signals": [
+        "GitHub AI topic search",
+        "65 stars в последнем полном дне Star History API",
+        "собственный рост +90 после прошлого полного выпуска",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/superset-sh/superset"
+    },
+    {
+      "full_name": "earthtojake/text-to-cad",
+      "description": "Открытый инструмент для преобразования текстового описания в редактируемую CAD-модель.",
+      "use_case": "Быстро создавать черновые инженерные формы по тексту и затем проверять геометрию в привычном CAD-процессе.",
+      "stars": 14611,
+      "forks": 1537,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-04-22T01:09:45Z",
+      "pushed_at": "2026-09-08T04:23:58Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 8,
+      "signals": [
+        "GitHub AI topic search",
+        "88 stars в последнем полном дне Star History API",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/earthtojake/text-to-cad"
+    },
+    {
+      "full_name": "xerrors/Yuxi",
+      "description": "Локальная база знаний и исследовательский помощник с RAG, инструментами и несколькими моделями.",
+      "use_case": "Организовать поиск по собственным документам и проверяемые ответы с локальным или управляемым модельным контуром.",
+      "stars": 6804,
+      "forks": 1045,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2024-07-05T10:57:35Z",
+      "pushed_at": "2026-09-08T04:19:00Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 7,
+      "signals": [
+        "GitHub AI topic search",
+        "41 star в последнем полном дне Star History API",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/xerrors/Yuxi"
+    },
+    {
+      "full_name": "firecrawl/firecrawl",
+      "description": "Контекстный API для поиска, извлечения и структурирования веб-данных в масштабе.",
+      "use_case": "Собирать проверяемый веб-контекст для агентов и RAG-процессов через единый API с управляемым форматом результата.",
+      "stars": 177719,
+      "forks": 9696,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "AGPL-3.0",
+      "created_at": "2024-04-15T21:02:29Z",
+      "pushed_at": "2026-09-08T04:15:48Z",
+      "tracking_since": "2026-09-06T07:08:20Z",
+      "score": 10,
+      "signals": [
+        "GitHub AI topic search",
+        "369 stars в последнем полном дне Star History API",
+        "собственный рост +723 после прошлого полного выпуска",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/firecrawl/firecrawl"
+    },
+    {
+      "full_name": "oomol-lab/open-connector",
+      "description": "Открытый коннектор для превращения веб-сервисов в инструменты, доступные AI-агентам.",
+      "use_case": "Подключать разрешенные веб-сервисы к агентному процессу через единый интерфейс с явными правами и проверкой результата.",
+      "stars": 5613,
+      "forks": 482,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "created_at": "2026-06-29T10:49:36Z",
+      "pushed_at": "2026-09-08T04:10:55Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 8,
+      "signals": [
+        "GitHub AI topic search",
+        "37 stars в последнем полном дне Star History API",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/oomol-lab/open-connector"
+    }
+  ],
+  "daily_action": {
+    "title": "Проверить агентный исследовательский цикл на одной задаче",
+    "plan": "Выбрать одну четко ограниченную задачу по открытым источникам, заранее записать критерии приемки и реестр источников, затем дать агенту выполнить цикл и проверить каждый вывод человеком. Не публиковать результат и не разрешать внешние действия.",
+    "expected_signal": "Полнота источников не ниже ручной работы, шагов оператора меньше, неподтвержденных утверждений нет, а остановка срабатывает по заданному условию.",
+    "link": "https://openai.com/index/research-acceleration-view-inside-openai/"
+  },
+  "corrections": [],
+  "errors": []
+}
