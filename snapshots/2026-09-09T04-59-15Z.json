@@ -1,0 +1,440 @@
+{
+  "schema_version": "1.0",
+  "run_key": "ai-radar:2026-09-09T07:30:00+04:00",
+  "attempt_id": "62158e2b-02e4-4c6c-ac57-c6f67e9347f7",
+  "generated_at": "2026-09-09T04:59:15Z",
+  "window_start": "2026-09-08T04:34:33Z",
+  "window_end": "2026-09-09T04:59:15Z",
+  "status": "complete",
+  "source_health": [
+    {
+      "source_key": "openai",
+      "label": "OpenAI News",
+      "status": "ok",
+      "detail": "Проверена официальная лента; отобраны три публикации от 8 сентября о генерации изображений, математическом доказательстве и лабораторных агентах."
+    },
+    {
+      "source_key": "anthropic",
+      "label": "Anthropic Newsroom",
+      "status": "ok",
+      "detail": "Проверена официальная лента; последняя видимая публикация датирована 1 сентября, новых событий внутри окна нет."
+    },
+    {
+      "source_key": "google-deepmind",
+      "label": "Google AI and DeepMind",
+      "status": "ok",
+      "detail": "Проверены официальные ленты; отобран запуск AlphaGenome Atlas от 8 сентября."
+    },
+    {
+      "source_key": "microsoft-github",
+      "label": "Microsoft and GitHub",
+      "status": "ok",
+      "detail": "Проверен GitHub Changelog; отобрана публичная версия централизованно управляемой песочницы для JetBrains."
+    },
+    {
+      "source_key": "meta-ai",
+      "label": "Meta AI",
+      "status": "ok",
+      "detail": "Официальная лента загрузилась; новых событий внутри окна с рейтингом от 7 не найдено."
+    },
+    {
+      "source_key": "xai",
+      "label": "xAI",
+      "status": "ok",
+      "detail": "Проверена официальная лента; последняя видимая публикация датирована 4 сентября, новых событий внутри окна нет."
+    },
+    {
+      "source_key": "mistral",
+      "label": "Mistral AI",
+      "status": "ok",
+      "detail": "Проверена официальная лента; найдено корпоративное объявление от 8 сентября, но оно не вошло в пятерку по практической применимости."
+    },
+    {
+      "source_key": "nvidia",
+      "label": "NVIDIA AI",
+      "status": "ok",
+      "detail": "Проверена официальная лента; новых событий внутри окна с рейтингом от 7 не найдено."
+    },
+    {
+      "source_key": "huggingface",
+      "label": "Hugging Face Blog",
+      "status": "ok",
+      "detail": "Проверена официальная лента; свежий материал сообщества не является самостоятельным официальным релизом и не включен."
+    },
+    {
+      "source_key": "github-trending",
+      "label": "GitHub Trending daily",
+      "status": "ok",
+      "detail": "Проверены 16 позиций дневного Trending и AI-topic search; отобраны 12 проектов из Trending и один проект из официального релиза."
+    },
+    {
+      "source_key": "github-api",
+      "label": "GitHub repository metadata",
+      "status": "ok",
+      "detail": "Для 13 проектов получены stars, forks, язык, лицензия, даты и история stars; архивных и отключенных репозиториев нет."
+    }
+  ],
+  "news_items": [
+    {
+      "id": "openai-chatgpt-images-2-5-2026-09-08",
+      "title": "OpenAI выпустила ChatGPT Images 2.5",
+      "summary": "Новая модель изображений точнее сохраняет людей и композицию из референсов, устойчивее выполняет последовательные правки и сокращает задержку генерации до 50% относительно Images 2.0. Она доступна пользователям ChatGPT, ChatGPT Work и Codex.",
+      "why_it_matters": "Для производственных визуальных процессов особенно важны локальные правки без разрушения остального кадра и стабильность серии. Заявленные улучшения требуют проверки на собственных референсах и типовых макетах.",
+      "apply_today": "На одном непубликуемом изображении выполнить три последовательные точечные правки и измерить сохранность лица, композиции, текста и времени генерации.",
+      "topic": "generative-images",
+      "score": 10,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "source_date": "2026-09-08"
+    },
+    {
+      "id": "openai-navier-stokes-solution-2026-09-08",
+      "title": "OpenAI заявила о решении задачи Навье-Стокса и открыла формализацию",
+      "summary": "OpenAI опубликовала аналитическое доказательство и формализацию на Lean для сценария образования сингулярности за конечное время. Компания сообщает, что результат получила внутренняя система, более сильная, чем GPT-6 Astra.",
+      "why_it_matters": "Если доказательство пройдет независимую проверку, это станет крупным подтверждением вклада AI в фундаментальную математику. Пока подтвержден факт публикации материалов, но не окончательное признание решения научным сообществом.",
+      "apply_today": "Сопоставить формулировку результата с условиями задачи Clay Institute и составить реестр независимых проверок, не запускать опубликованный код и не считать заявление принятой теоремой.",
+      "topic": "ai-for-science",
+      "score": 10,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/navier-stokes-solution/",
+      "source_date": "2026-09-08"
+    },
+    {
+      "id": "google-alphagenome-atlas-2026-09-08",
+      "title": "Google DeepMind открыла AlphaGenome Atlas для анализа вариантов генома",
+      "summary": "AlphaGenome Atlas содержит предварительно рассчитанные прогнозы влияния 9 миллиардов однонуклеотидных вариантов на регуляцию генов в наборе объемом около 1 петабайта. Веб-портал доступен исследователям без программирования.",
+      "why_it_matters": "Биологи получают быстрый способ ранжировать варианты в кодирующих и некодирующих областях. Это инструмент выдвижения гипотез, а не клиническое заключение, поэтому прогнозы требуют экспериментальной проверки.",
+      "apply_today": "В исследовательском протоколе отделить прогноз Atlas от подтвержденного наблюдения и заранее определить эксперимент, который способен опровергнуть выбранную гипотезу.",
+      "topic": "genomics-ai",
+      "score": 9,
+      "source_name": "Google DeepMind",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+      "source_date": "2026-09-08"
+    },
+    {
+      "id": "openai-quantum-lab-agents-2026-09-08",
+      "title": "Агент OpenAI провел серии измерений на квантовом чипе",
+      "summary": "В лаборатории MIT агент на GPT-5.6 Sol через Codex выбирал параметры, запускал измерения на шестикубитном чипе, анализировал результаты и уточнял следующие шаги. Рутинные последовательности выполнялись с небольшим вмешательством исследователя.",
+      "why_it_matters": "Кейс показывает переход от генерации кода к управлению реальным научным циклом через программное оборудование. При слабом или шумном сигнале агенту требовалась помощь опытного специалиста.",
+      "apply_today": "Для безопасного стенда описать один рутинный цикл как навык, ограничить допустимые параметры и проверить, останавливается ли агент при неоднозначном сигнале.",
+      "topic": "lab-agents",
+      "score": 9,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/codex-quantum-computing-experiments/",
+      "source_date": "2026-09-08"
+    },
+    {
+      "id": "github-enterprise-sandbox-jetbrains-2026-09-08",
+      "title": "GitHub добавил централизованные политики песочницы в JetBrains",
+      "summary": "Администраторы GitHub Copilot теперь могут централизованно задавать доступ к файловой системе, сети, прокси, инструментам разработчика и macOS Keychain. Управляемые ограничения имеют приоритет над локальными настройками пользователя.",
+      "why_it_matters": "Команды получают проверяемые границы для агентного выполнения прямо в IDE. Функция находится в публичной предварительной версии, поэтому ее нужно испытать до включения в критические процессы.",
+      "apply_today": "На тестовом проекте задать запрет сети и записи вне рабочей папки, затем проверить диагностику политик и два ожидаемо заблокированных действия агента.",
+      "topic": "agent-sandboxing",
+      "score": 8,
+      "source_name": "GitHub Changelog",
+      "source_url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains/",
+      "source_date": "2026-09-08"
+    }
+  ],
+  "repositories": [
+    {
+      "full_name": "ayghri/i-have-adhd",
+      "description": "Навык, который заставляет coding-агента выдавать компактный результат без перегруженного объяснения.",
+      "use_case": "Настроить короткие, сканируемые ответы агента для пользователей, которым трудно удерживать внимание на длинных технических сообщениях.",
+      "stars": 31208,
+      "forks": 1884,
+      "trending_stars_today": 656,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-05-13T20:42:06Z",
+      "pushed_at": "2026-09-08T17:08:54Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 10,
+      "signals": [
+        "GitHub Trending daily",
+        "656 stars today",
+        "3332 stars в последнем полном дне Star History API",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/ayghri/i-have-adhd"
+    },
+    {
+      "full_name": "cathrynlavery/diagram-design",
+      "description": "Коллекция из 38 редакционных типов диаграмм для AI-агентов на чистых HTML и SVG.",
+      "use_case": "Собирать понятные схемы архитектуры, процессов и сравнений без зависимости от отдельного сервиса визуализации.",
+      "stars": 35251,
+      "forks": 2216,
+      "trending_stars_today": 710,
+      "delta_24h": null,
+      "language": "HTML",
+      "license": "MIT",
+      "created_at": "2026-04-16T18:01:16Z",
+      "pushed_at": "2026-09-08T19:45:13Z",
+      "tracking_since": "2026-09-06T07:08:20Z",
+      "score": 10,
+      "signals": [
+        "GitHub Trending daily",
+        "710 stars today",
+        "1798 stars в последнем полном дне Star History API",
+        "собственный рост +3390 с первого наблюдения",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/cathrynlavery/diagram-design"
+    },
+    {
+      "full_name": "openai/skills",
+      "description": "Официальный публичный каталог навыков OpenAI для агентных рабочих процессов.",
+      "use_case": "Изучать формат переносимых инструкций и сверять собственные навыки с официальными примерами OpenAI.",
+      "stars": 26603,
+      "forks": 1785,
+      "trending_stars_today": 490,
+      "delta_24h": null,
+      "language": "Python",
+      "license": null,
+      "created_at": "2025-11-25T06:25:42Z",
+      "pushed_at": "2026-09-08T20:35:26Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "490 stars today",
+        "421 star в последнем полном дне Star History API",
+        "собственный рост +481 между выпусками",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/openai/skills"
+    },
+    {
+      "full_name": "heygen-com/hyperframes",
+      "description": "Открытый фреймворк для программного создания и рендеринга видео с HTML и TypeScript.",
+      "use_case": "Собирать воспроизводимые видео из компонентов, данных и шаблонов для маркетинговых и продуктовых материалов.",
+      "stars": 47927,
+      "forks": 4402,
+      "trending_stars_today": 2627,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "created_at": "2026-03-10T01:51:06Z",
+      "pushed_at": "2026-09-09T04:48:30Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 10,
+      "signals": [
+        "GitHub Trending daily",
+        "2627 stars today",
+        "1201 star в последнем полном дне Star History API",
+        "собственный рост +1520 между выпусками",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/heygen-com/hyperframes"
+    },
+    {
+      "full_name": "coreyhaines31/marketingskills",
+      "description": "Набор прикладных навыков и шаблонов для маркетинговых задач AI-агентов.",
+      "use_case": "Стандартизировать исследование аудитории, позиционирование, контент и проверку маркетинговых материалов.",
+      "stars": 48945,
+      "forks": 7501,
+      "trending_stars_today": 666,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-01-15T19:45:23Z",
+      "pushed_at": "2026-09-05T04:48:10Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "666 stars today",
+        "618 stars в последнем полном дне Star History API",
+        "собственный рост +685 между выпусками"
+      ],
+      "source_url": "https://github.com/coreyhaines31/marketingskills"
+    },
+    {
+      "full_name": "obra/superpowers",
+      "description": "Фреймворк агентных навыков и методика разработки с явными этапами планирования, реализации и проверки.",
+      "use_case": "Организовать воспроизводимый инженерный процесс агента с небольшими задачами, проверками и контролируемой передачей результата.",
+      "stars": 283472,
+      "forks": 25377,
+      "trending_stars_today": 452,
+      "delta_24h": null,
+      "language": "Shell",
+      "license": "MIT",
+      "created_at": "2025-10-09T19:45:18Z",
+      "pushed_at": "2026-09-08T21:39:23Z",
+      "tracking_since": "2026-09-04T12:50:55Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "452 stars today",
+        "561 star в последнем полном дне Star History API",
+        "собственный рост +1826 с первого наблюдения",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/obra/superpowers"
+    },
+    {
+      "full_name": "multica-ai/andrej-karpathy-skills",
+      "description": "Неофициальный файл инструкций для coding-агента, собранный по публичным наблюдениям Андрея Карпати.",
+      "use_case": "Проверить собственные инструкции агента на типичные ошибки: лишние абстракции, слабую верификацию и преждевременную сложность.",
+      "stars": 211578,
+      "forks": 21476,
+      "trending_stars_today": 333,
+      "delta_24h": null,
+      "language": null,
+      "license": null,
+      "created_at": "2026-01-27T03:53:13Z",
+      "pushed_at": "2026-04-20T10:05:04Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 7,
+      "signals": [
+        "GitHub Trending daily",
+        "333 stars today",
+        "616 stars в последнем полном дне Star History API",
+        "неофициальный проект"
+      ],
+      "source_url": "https://github.com/multica-ai/andrej-karpathy-skills"
+    },
+    {
+      "full_name": "microsoft/markitdown",
+      "description": "Утилита Microsoft для преобразования документов и других файлов в Markdown.",
+      "use_case": "Нормализовать PDF, презентации, таблицы и офисные документы перед индексированием, поиском или анализом агентом.",
+      "stars": 181846,
+      "forks": 13354,
+      "trending_stars_today": 2047,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2024-11-13T19:56:40Z",
+      "pushed_at": "2026-09-07T04:58:15Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 10,
+      "signals": [
+        "GitHub Trending daily",
+        "2047 stars today",
+        "1023 stars в последнем полном дне Star History API",
+        "собственный рост +1242 между выпусками"
+      ],
+      "source_url": "https://github.com/microsoft/markitdown"
+    },
+    {
+      "full_name": "jo-inc/camofox-browser",
+      "description": "Программно управляемый браузерный рантайм для автоматизации и агентных сценариев.",
+      "use_case": "Тестировать разрешенные браузерные процессы в контролируемой среде с соблюдением правил сайта и ограничений доступа.",
+      "stars": 10631,
+      "forks": 1060,
+      "trending_stars_today": 871,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-01-26T07:31:13Z",
+      "pushed_at": "2026-09-06T03:30:20Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "871 stars today",
+        "652 stars в последнем полном дне Star History API",
+        "собственный рост +749 между выпусками"
+      ],
+      "source_url": "https://github.com/jo-inc/camofox-browser"
+    },
+    {
+      "full_name": "browser-use/browser-use",
+      "description": "Открытый Python-фреймворк для агентов, которые выполняют задачи через браузер.",
+      "use_case": "Прототипировать браузерные процессы с явными разрешениями, наблюдаемыми шагами и человеческой проверкой перед внешними действиями.",
+      "stars": 113661,
+      "forks": 12499,
+      "trending_stars_today": 228,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2024-10-31T16:00:56Z",
+      "pushed_at": "2026-09-07T19:55:36Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "228 stars today",
+        "680 stars в последнем полном дне Star History API"
+      ],
+      "source_url": "https://github.com/browser-use/browser-use"
+    },
+    {
+      "full_name": "The-Swarm-Corporation/AutoHedge",
+      "description": "Многоагентная исследовательская система для анализа рынков и инвестиционных гипотез.",
+      "use_case": "Изучать координацию финансовых агентов только на синтетических данных или в режиме paper trading без реальных денег.",
+      "stars": 5785,
+      "forks": 844,
+      "trending_stars_today": 494,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2024-12-10T20:34:46Z",
+      "pushed_at": "2026-05-11T05:44:09Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "494 stars today",
+        "401 star в последнем полном дне Star History API",
+        "собственный рост +446 между выпусками",
+        "только для paper trading"
+      ],
+      "source_url": "https://github.com/The-Swarm-Corporation/AutoHedge"
+    },
+    {
+      "full_name": "openai/plugins",
+      "description": "Официальный публичный каталог плагинов OpenAI для расширения возможностей Codex.",
+      "use_case": "Изучать структуру расширений, их manifest и состав навыков перед созданием собственного локального плагина.",
+      "stars": 5900,
+      "forks": 806,
+      "trending_stars_today": 105,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": null,
+      "created_at": "2026-03-04T21:52:32Z",
+      "pushed_at": "2026-09-08T17:57:28Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "105 stars today",
+        "406 stars в последнем полном дне Star History API",
+        "официальный репозиторий OpenAI",
+        "push within 24h"
+      ],
+      "source_url": "https://github.com/openai/plugins"
+    },
+    {
+      "full_name": "openai/NavierStokesAndEuler",
+      "description": "Официальные сертификаты Lean для опубликованных результатов по уравнениям Навье-Стокса и Эйлера.",
+      "use_case": "Изучать проверяемую структуру формального доказательства и сопоставлять ее с аналитической статьей без выполнения кода репозитория.",
+      "stars": 1052,
+      "forks": 85,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Lean",
+      "license": "Apache-2.0",
+      "created_at": "2026-09-08T10:53:38Z",
+      "pushed_at": "2026-09-08T11:00:49Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 10,
+      "signals": [
+        "репозиторий из официального релиза OpenAI",
+        "1052 stars в первый полный день Star History API",
+        "создан менее суток назад",
+        "формализация на Lean"
+      ],
+      "source_url": "https://github.com/openai/NavierStokesAndEuler"
+    }
+  ],
+  "daily_action": {
+    "title": "Проверить устойчивость трех последовательных правок изображения",
+    "plan": "Взять одно локальное несекретное изображение, сохранить исходный эталон и выполнить три точечные правки в Images 2.5. После каждого шага сравнить лицо, композицию, текст, фон и время генерации. Ничего не публиковать и не заменять рабочие материалы.",
+    "expected_signal": "Запрошенный элемент меняется, остальные контрольные области сохраняются, качество не деградирует после трех шагов, а задержка фиксируется отдельно для каждого запуска.",
+    "link": "https://openai.com/index/introducing-chatgpt-images-2-5/"
+  },
+  "corrections": [],
+  "errors": []
+}
