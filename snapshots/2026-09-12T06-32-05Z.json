@@ -1,0 +1,443 @@
+{
+  "schema_version": "1.0",
+  "run_key": "ai-radar:2026-09-12T07:30:00+04:00",
+  "attempt_id": "2e2b4fa0-ff5d-4d08-b282-5abb819a3830",
+  "generated_at": "2026-09-12T06:32:05Z",
+  "window_start": "2026-09-09T06:32:05Z",
+  "window_end": "2026-09-12T06:32:05Z",
+  "status": "complete",
+  "source_health": [
+    {
+      "source_key": "openai",
+      "label": "OpenAI",
+      "status": "ok",
+      "detail": "Проверены https://openai.com/news/ и первоисточники; выбраны три релиза от 10 сентября."
+    },
+    {
+      "source_key": "anthropic",
+      "label": "Anthropic",
+      "status": "ok",
+      "detail": "Проверены https://www.anthropic.com/news и отчет от 10 сентября; включен в выпуск."
+    },
+    {
+      "source_key": "google",
+      "label": "Google / DeepMind",
+      "status": "ok",
+      "detail": "Проверены https://blog.google/innovation-and-ai/ и публикация MAPL-EMIT от 9 сентября; в пятерку вошли более прикладные события."
+    },
+    {
+      "source_key": "microsoft-github",
+      "label": "Microsoft / GitHub",
+      "status": "ok",
+      "detail": "Проверен https://github.blog/changelog/; включено обновление code review от 11 сентября."
+    },
+    {
+      "source_key": "meta",
+      "label": "Meta AI",
+      "status": "ok",
+      "detail": "Проверен https://ai.meta.com/blog/; свежих публикаций в окне не обнаружено."
+    },
+    {
+      "source_key": "xai",
+      "label": "xAI",
+      "status": "ok",
+      "detail": "Проверен https://x.ai/news; подходящих публикаций в окне не обнаружено."
+    },
+    {
+      "source_key": "mistral",
+      "label": "Mistral",
+      "status": "ok",
+      "detail": "Проверен https://mistral.ai/news/; найдены партнерство от 10 сентября и прикладной кейс от 9 сентября, не вошедшие в пятерку."
+    },
+    {
+      "source_key": "nvidia",
+      "label": "NVIDIA",
+      "status": "ok",
+      "detail": "Проверен https://blogs.nvidia.com/ и материал Skild AI от 10 сентября; не вошел в пятерку по применимости."
+    },
+    {
+      "source_key": "hugging-face",
+      "label": "Hugging Face",
+      "status": "ok",
+      "detail": "Проверен https://huggingface.co/blog и материал Gradio от 10 сентября; в итоговый отбор не включен."
+    },
+    {
+      "source_key": "github-trending",
+      "label": "GitHub Trending",
+      "status": "ok",
+      "detail": "Проверен https://github.com/trending?since=daily; отбор расширен AI-topic search, предыдущим выпуском и проектом из официального релиза."
+    },
+    {
+      "source_key": "github-api",
+      "label": "GitHub API",
+      "status": "ok",
+      "detail": "Для 13 проектов проверены метаданные и /stargazers/history?per_page=1. Последний полный день: 2026-09-11 UTC. Все проекты активны."
+    },
+    {
+      "source_key": "window",
+      "label": "Окно выпуска",
+      "status": "ok",
+      "detail": "После выпуска от 2026-09-09T04:59:15Z прошло больше 72 часов; окно ограничено последними 72 часами по контракту."
+    }
+  ],
+  "news_items": [
+    {
+      "id": "openai-agents-api-2026-09-10",
+      "title": "OpenAI открыла публичную бету Agents API",
+      "summary": "Agents API дает разработчикам управляемую среду для облачных агентов с механизмом выполнения Codex, инструментами и субагентами. OpenAI берет на себя эксплуатацию инфраструктуры.",
+      "why_it_matters": "Длительные задачи и координацию агентов можно строить на готовой инфраструктуре. Это повод пересмотреть стоимость собственного оркестратора, но не доказательство надежности конкретного сценария.",
+      "apply_today": "По документации сопоставить контекст, восстановление задач, окружение и разрешения со своим агентом; составить таблицу пробелов без API-вызовов.",
+      "topic": "agent-infrastructure",
+      "score": 10,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/introducing-the-agents-api/",
+      "source_date": "2026-09-10"
+    },
+    {
+      "id": "openai-gpt-live-1-2026-09-10",
+      "title": "GPT-Live-1 появился в API для полнодуплексных голосовых агентов",
+      "summary": "Модель одновременно слушает и говорит, обрабатывает перебивания и передает сложные рассуждения и инструменты выбранной текстовой модели. Поддерживается телефония.",
+      "why_it_matters": "Единый голосовой слой может сократить задержки и ошибки на стыках распознавания, генерации ответа и синтеза речи. Результаты нужно проверять на собственном языке и сценариях.",
+      "apply_today": "Подготовить набор диалогов с паузами, перебиваниями, шумом и исправлением намерения. Определить метрики задержки и корректности до платного тестирования.",
+      "topic": "voice-agents",
+      "score": 10,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+      "source_date": "2026-09-10"
+    },
+    {
+      "id": "openai-data-agent-2026-09-10",
+      "title": "В ChatGPT Work представлен Data agent для корпоративной аналитики",
+      "summary": "Data agent подключает согласованные источники данных, исследует изменения показателей и создает интерактивные панели. Запросы учитывают права подключенной учетной записи, включая ограничения строк и столбцов.",
+      "why_it_matters": "Снижает порог для анализа бизнес-данных, но качество выводов зависит от определений метрик, источников и настроенных прав.",
+      "apply_today": "Выбрать один отчет, записать определения его показателей и контрольные ответы; подготовить обезличенный пример для будущего сравнения.",
+      "topic": "business-analytics",
+      "score": 9,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/put-data-to-work/",
+      "source_date": "2026-09-10"
+    },
+    {
+      "id": "anthropic-threat-report-2026-09-10",
+      "title": "Anthropic опубликовала новый отчет о злоупотреблениях ИИ",
+      "summary": "Отчет описывает выявленные и пресеченные операции с декабря 2025 по август 2026 года в семи областях, включая кибератаки, наблюдение и мошенничество. Это новая публикация о ранее наблюдавшихся событиях.",
+      "why_it_matters": "Авторы сообщают о переходе от консультаций с моделью к автоматизированному выполнению цепочек действий. Для разработчиков это материал для проверки ограничений доступа и наблюдаемости агентов.",
+      "apply_today": "Сопоставить разрешения своего агента с его задачами: проверить ограничение сетевых направлений, доступ к секретам, журнал действий и точки подтверждения.",
+      "topic": "ai-security",
+      "score": 9,
+      "source_name": "Anthropic",
+      "source_url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+      "source_date": "2026-09-10"
+    },
+    {
+      "id": "github-copilot-review-2026-09-11",
+      "title": "Copilot code review расширил проверку кода и закрытие исправленных замечаний",
+      "summary": "При повторном ревью Copilot закрывает собственные замечания, исправленные последующими коммитами. Для проверки кода добавлены shell-инструменты, а уровень Lite использует несколько агентов.",
+      "why_it_matters": "Ревью получает больше способов проверить находки и сокращает ручную обработку обсуждений. Автоматическое закрытие замечания само по себе не заменяет проверку исправления.",
+      "apply_today": "На уже проверенном diff сравнить замечания с результатами тестов и ручного ревью; фиксировать полезные находки и ошибочные закрытия.",
+      "topic": "code-review",
+      "score": 8,
+      "source_name": "GitHub Changelog",
+      "source_url": "https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review/",
+      "source_date": "2026-09-11"
+    }
+  ],
+  "repositories": [
+    {
+      "full_name": "ayghri/i-have-adhd",
+      "description": "Навык, который заставляет coding-агента выдавать компактный результат без перегруженного объяснения.",
+      "use_case": "Настроить короткие, сканируемые ответы агента для пользователей, которым трудно удерживать внимание на длинных технических сообщениях.",
+      "stars": 42383,
+      "forks": 2404,
+      "trending_stars_today": 3463,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-05-13T20:42:06Z",
+      "pushed_at": "2026-09-10T15:48:41Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "3463 stars today",
+        "Star History: +3252 stars за 2026-09-11 UTC",
+        "Собственный рост +11175 с выпуска 2026-09-09, не дельта за 24 часа",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/ayghri/i-have-adhd"
+    },
+    {
+      "full_name": "nashsu/llm_wiki",
+      "description": "Настольная база знаний, которая превращает документы в связанную wiki и поддерживает ссылки на исходники.",
+      "use_case": "Сравнить ответы по исходным документам и по wiki на небольшом несекретном наборе, отдельно проверяя происхождение каждого утверждения.",
+      "stars": 18864,
+      "forks": 2144,
+      "trending_stars_today": 647,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": null,
+      "created_at": "2026-04-08T11:24:01Z",
+      "pushed_at": "2026-08-25T06:42:02Z",
+      "tracking_since": "2026-09-12T06:32:05Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "647 stars today",
+        "Star History: +565 stars за 2026-09-11 UTC",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/nashsu/llm_wiki"
+    },
+    {
+      "full_name": "jihe520/MathModelAgent",
+      "description": "Агент и набор навыков для математического моделирования, анализа задач и подготовки исследовательских черновиков.",
+      "use_case": "Изучить разделение задач между моделированием, кодом и оформлением; проверять выводы на задачах с известным решением.",
+      "stars": 4930,
+      "forks": 394,
+      "trending_stars_today": 129,
+      "delta_24h": null,
+      "language": "Python",
+      "license": null,
+      "created_at": "2025-01-30T14:02:20Z",
+      "pushed_at": "2026-09-10T20:40:40Z",
+      "tracking_since": "2026-09-12T06:32:05Z",
+      "score": 8,
+      "signals": [
+        "GitHub Trending daily",
+        "129 stars today",
+        "Star History: +233 stars за 2026-09-11 UTC",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/jihe520/MathModelAgent"
+    },
+    {
+      "full_name": "jordan-gibbs/hyperresearch",
+      "description": "Исследовательский процесс для Claude Code с постоянным хранилищем источников и проверкой цитат.",
+      "use_case": "Сопоставить проверку независимости источников и цитат со своим исследовательским процессом. Заявления о лидерстве основаны на внутренних оценках авторов.",
+      "stars": 2773,
+      "forks": 269,
+      "trending_stars_today": 153,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-04-09T20:46:46Z",
+      "pushed_at": "2026-09-11T21:15:16Z",
+      "tracking_since": "2026-09-12T06:32:05Z",
+      "score": 9,
+      "signals": [
+        "GitHub Trending daily",
+        "153 stars today",
+        "Star History: +609 stars за 2026-09-11 UTC",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/jordan-gibbs/hyperresearch"
+    },
+    {
+      "full_name": "cathrynlavery/diagram-design",
+      "description": "Коллекция из 38 редакционных типов диаграмм для AI-агентов на чистых HTML и SVG.",
+      "use_case": "Собирать понятные схемы архитектуры, процессов и сравнений без зависимости от отдельного сервиса визуализации.",
+      "stars": 38580,
+      "forks": 2450,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "HTML",
+      "license": "MIT",
+      "created_at": "2026-04-16T18:01:16Z",
+      "pushed_at": "2026-09-10T22:33:54Z",
+      "tracking_since": "2026-09-06T07:08:20Z",
+      "score": 9,
+      "signals": [
+        "Star History: +548 stars за 2026-09-11 UTC",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "Собственный рост +3329 с выпуска 2026-09-09, не дельта за 24 часа",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/cathrynlavery/diagram-design"
+    },
+    {
+      "full_name": "heygen-com/hyperframes",
+      "description": "Открытый фреймворк для программного создания и рендеринга видео с HTML и TypeScript.",
+      "use_case": "Собирать воспроизводимые видео из компонентов, данных и шаблонов для маркетинговых и продуктовых материалов.",
+      "stars": 49067,
+      "forks": 4483,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "Apache-2.0",
+      "created_at": "2026-03-10T01:51:06Z",
+      "pushed_at": "2026-09-12T06:06:37Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "Star History: +225 stars за 2026-09-11 UTC",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "Собственный рост +1140 с выпуска 2026-09-09, не дельта за 24 часа",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/heygen-com/hyperframes"
+    },
+    {
+      "full_name": "coreyhaines31/marketingskills",
+      "description": "Набор прикладных навыков и шаблонов для маркетинговых задач AI-агентов.",
+      "use_case": "Стандартизировать исследование аудитории, позиционирование, контент и проверку маркетинговых материалов.",
+      "stars": 49673,
+      "forks": 7550,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-01-15T19:45:23Z",
+      "pushed_at": "2026-09-05T04:48:10Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "Star History: +186 stars за 2026-09-11 UTC",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "Собственный рост +728 с выпуска 2026-09-09, не дельта за 24 часа",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/coreyhaines31/marketingskills"
+    },
+    {
+      "full_name": "microsoft/markitdown",
+      "description": "Утилита Microsoft для преобразования документов и других файлов в Markdown.",
+      "use_case": "Нормализовать PDF, презентации, таблицы и офисные документы перед индексированием, поиском или анализом агентом.",
+      "stars": 182757,
+      "forks": 13438,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2024-11-13T19:56:40Z",
+      "pushed_at": "2026-09-11T22:53:02Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "Star History: +271 stars за 2026-09-11 UTC",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "Собственный рост +911 с выпуска 2026-09-09, не дельта за 24 часа",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/microsoft/markitdown"
+    },
+    {
+      "full_name": "browser-use/browser-use",
+      "description": "Открытый Python-фреймворк для агентов, которые выполняют задачи через браузер.",
+      "use_case": "Прототипировать браузерные процессы с явными разрешениями, наблюдаемыми шагами и человеческой проверкой перед внешними действиями.",
+      "stars": 114279,
+      "forks": 12563,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2024-10-31T16:00:56Z",
+      "pushed_at": "2026-09-10T04:20:25Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 8,
+      "signals": [
+        "Star History: +161 stars за 2026-09-11 UTC",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "Собственный рост +618 с выпуска 2026-09-09, не дельта за 24 часа",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/browser-use/browser-use"
+    },
+    {
+      "full_name": "openai/skills",
+      "description": "Официальный публичный каталог навыков OpenAI для агентных рабочих процессов.",
+      "use_case": "Изучать формат переносимых инструкций и сверять собственные навыки с официальными примерами OpenAI.",
+      "stars": 26950,
+      "forks": 1805,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": null,
+      "created_at": "2025-11-25T06:25:42Z",
+      "pushed_at": "2026-09-08T20:35:26Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "Star History: +78 stars за 2026-09-11 UTC",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "Собственный рост +347 с выпуска 2026-09-09, не дельта за 24 часа",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/openai/skills"
+    },
+    {
+      "full_name": "openai/plugins",
+      "description": "Официальный публичный каталог плагинов OpenAI для расширения возможностей Codex.",
+      "use_case": "Изучать структуру расширений, их manifest и состав навыков перед созданием собственного локального плагина.",
+      "stars": 6472,
+      "forks": 852,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": null,
+      "created_at": "2026-03-04T21:52:32Z",
+      "pushed_at": "2026-09-11T22:01:06Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 8,
+      "signals": [
+        "Star History: +75 stars за 2026-09-11 UTC",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "Собственный рост +572 с выпуска 2026-09-09, не дельта за 24 часа",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/openai/plugins"
+    },
+    {
+      "full_name": "rasbt/LLMs-from-scratch",
+      "description": "Учебный репозиторий Себастьяна Рашки о разработке, предобучении и дообучении GPT-подобной модели на PyTorch.",
+      "use_case": "Разобрать устройство attention, токенизации и обучения на небольших примерах перед проектированием собственной модели.",
+      "stars": 104798,
+      "forks": 16061,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Jupyter Notebook",
+      "license": null,
+      "created_at": "2023-07-23T18:15:57Z",
+      "pushed_at": "2026-09-10T20:36:18Z",
+      "tracking_since": "2026-09-12T06:32:05Z",
+      "score": 7,
+      "signals": [
+        "Star History: +62 stars за 2026-09-11 UTC",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "AI-topic search",
+        "Push 2026-09-10",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/rasbt/LLMs-from-scratch"
+    },
+    {
+      "full_name": "openai/codex",
+      "description": "Открытый терминальный coding-агент OpenAI; его код указан как основа Agents API.",
+      "use_case": "Изучить организацию инструментов, контекста и длительных задач для сравнения с архитектурой собственного агента.",
+      "stars": 123473,
+      "forks": 19007,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Rust",
+      "license": "Apache-2.0",
+      "created_at": "2025-04-13T05:37:54Z",
+      "pushed_at": "2026-09-12T05:04:25Z",
+      "tracking_since": "2026-09-12T06:32:05Z",
+      "score": 9,
+      "signals": [
+        "Star History: +301 stars за 2026-09-11 UTC",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "Упомянут в официальном релизе Agents API от 2026-09-10",
+        "Метрики проверены 2026-09-12 около 06:32 UTC"
+      ],
+      "source_url": "https://github.com/openai/codex"
+    }
+  ],
+  "daily_action": {
+    "title": "Подготовить проверяемый набор сценариев для голосового агента",
+    "plan": "Описать десять коротких синтетических диалогов: пауза, перебивание, смена намерения, фоновый разговор и диктовка букв с цифрами. Для каждого записать ожидаемое поведение и критерий ошибки. Не использовать клиентские записи и не запускать платные API.",
+    "expected_signal": "Есть десять воспроизводимых сценариев с ожидаемыми ответами и метриками задержки, перебиваний и корректности действий.",
+    "link": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
+  },
+  "corrections": [],
+  "errors": []
+}
