@@ -1,0 +1,385 @@
+{
+  "schema_version": "1.0",
+  "run_key": "ai-radar:2026-09-14T07:30:00+04:00",
+  "attempt_id": "73dc9ea2-19d5-45bd-9368-bd98adf10579",
+  "generated_at": "2026-09-14T03:36:08Z",
+  "window_start": "2026-09-13T13:52:25Z",
+  "window_end": "2026-09-14T03:36:08Z",
+  "status": "complete",
+  "source_health": [
+    {
+      "source_key": "openai",
+      "label": "OpenAI",
+      "status": "ok",
+      "detail": "Проверены https://openai.com/news/ и поиск по датам. Подтвержден кейс Perplexity от 14 сентября; это новая публикация, а не релиз модели."
+    },
+    {
+      "source_key": "anthropic",
+      "label": "Anthropic",
+      "status": "ok",
+      "detail": "Проверен https://www.anthropic.com/news; последние видимые объявления вне окна, новых подходящих событий не обнаружено."
+    },
+    {
+      "source_key": "google",
+      "label": "Google / DeepMind",
+      "status": "ok",
+      "detail": "Проверены https://blog.google/innovation-and-ai/ и https://deepmind.google/blog/ плюс поиск по датам. Подходящих новых событий в окне не обнаружено."
+    },
+    {
+      "source_key": "microsoft-github",
+      "label": "Microsoft / GitHub",
+      "status": "ok",
+      "detail": "Проверены https://github.blog/changelog/ и https://news.microsoft.com/source/topics/ai/. Новые подходящие публикации в окне не обнаружены; последние видимые записи GitHub от 11 сентября."
+    },
+    {
+      "source_key": "meta",
+      "label": "Meta AI",
+      "status": "ok",
+      "detail": "Проверен https://ai.meta.com/blog/; новые подходящие публикации в окне не обнаружены."
+    },
+    {
+      "source_key": "xai",
+      "label": "xAI",
+      "status": "ok",
+      "detail": "Проверен https://x.ai/news; новые подходящие публикации в окне не обнаружены."
+    },
+    {
+      "source_key": "mistral",
+      "label": "Mistral",
+      "status": "ok",
+      "detail": "Проверен https://mistral.ai/news/; последняя видимая новость от 10 сентября, вне окна."
+    },
+    {
+      "source_key": "nvidia",
+      "label": "NVIDIA",
+      "status": "ok",
+      "detail": "Проверен https://blogs.nvidia.com/; последние видимые новости от 10 сентября, вне окна."
+    },
+    {
+      "source_key": "hugging-face",
+      "label": "Hugging Face",
+      "status": "ok",
+      "detail": "Проверен https://huggingface.co/blog и поиск по датам. В основной ленте последняя публикация от 10 сентября; новые подходящие события не подтверждены."
+    },
+    {
+      "source_key": "github-trending",
+      "label": "GitHub Trending",
+      "status": "ok",
+      "detail": "Проверен https://github.com/trending?since=daily, AI-topic search и прошлый выпуск. Отобраны 12 проектов с подтвержденным ростом; устаревший каталог исключен из рекомендаций."
+    },
+    {
+      "source_key": "github-api",
+      "label": "GitHub API",
+      "status": "ok",
+      "detail": "Метаданные, полный README и собственный рост проверены для всех 12 проектов; для четырех Trending-проектов дополнительно прочитан /stargazers/history?per_page=1. Запись выпуска только через GitHub MCP."
+    },
+    {
+      "source_key": "window",
+      "label": "Окно выпуска",
+      "status": "ok",
+      "detail": "От 2026-09-13T13:52:25Z до 2026-09-14T03:36:08Z. Интервал меньше 24 часов: delta_24h остается null. Рост между выпусками и stars today разделены."
+    }
+  ],
+  "news_items": [
+    {
+      "id": "openai-perplexity-astra-testing-2026-09-14",
+      "title": "Perplexity рассказала о тестировании систем с GPT-6 Astra",
+      "summary": "В новом кейсе OpenAI сооснователь Perplexity описывает применение Astra к разработке и наблюдению за системами. Для тестирования модель создает программы, имитирующие ответы внешних сервисов.",
+      "why_it_matters": "Практический прием для проверки ошибок интеграций до живого запуска. Это свидетельство клиента в материале поставщика, не независимый тест надежности.",
+      "apply_today": "Описать для одного коннектора ответы при успехе, тайм-ауте и неверном формате. Разделить проверку с имитацией сервиса и реальную сквозную проверку.",
+      "topic": "agent-testing",
+      "score": 7,
+      "source_name": "OpenAI: кейс Perplexity",
+      "source_url": "https://openai.com/index/perplexity-improving-accuracy-with-astra/",
+      "source_date": "2026-09-14"
+    }
+  ],
+  "repositories": [
+    {
+      "full_name": "JustVugg/colibri",
+      "description": "Движок вывода MoE-моделей на C с распределением весов между накопителем, RAM и VRAM.",
+      "use_case": "По документации сопоставить требования модели с имеющимся оборудованием. Скорость на своем компьютере не подтверждена; код в этом выпуске не запускался.",
+      "stars": 30108,
+      "forks": 3263,
+      "trending_stars_today": 868,
+      "delta_24h": null,
+      "language": "C",
+      "license": "Apache-2.0",
+      "created_at": "2026-07-01T12:27:49Z",
+      "pushed_at": "2026-09-14T00:59:24Z",
+      "tracking_since": "2026-09-13T13:52:25Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +1076 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "GitHub Trending daily",
+        "868 stars today",
+        "GitHub Star History: +1399 stars за 2026-09-13 UTC",
+        "README проверен 2026-09-14; SHA f204abccbc587a69effc923042cc2b448eaada51"
+      ],
+      "source_url": "https://github.com/JustVugg/colibri"
+    },
+    {
+      "full_name": "multimodal-art-projection/YuE",
+      "description": "YuE2 генерирует музыку через редактируемый план мелодии и аккордов, затем создает вокал и сопровождение.",
+      "use_case": "Оценить управляемость музыкального плана для собственных роликов. Использовать только свои или разрешенные материалы; лицензии весов проверять отдельно.",
+      "stars": 7836,
+      "forks": 871,
+      "trending_stars_today": 487,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2025-01-23T06:21:58Z",
+      "pushed_at": "2026-09-11T17:37:59Z",
+      "tracking_since": "2026-09-13T13:52:25Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +282 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "GitHub Trending daily",
+        "487 stars today",
+        "GitHub Star History: +417 stars за 2026-09-13 UTC",
+        "README проверен 2026-09-14; SHA 2501e1c70a219896ce46cbbf5768d747ee2b5699"
+      ],
+      "source_url": "https://github.com/multimodal-art-projection/YuE"
+    },
+    {
+      "full_name": "vxcontrol/pentagi",
+      "description": "Система AI-агентов для автоматизированного тестирования безопасности с инструментами, памятью и наблюдением за действиями.",
+      "use_case": "Изучить архитектуру изоляции и надзора для будущего теста только на собственном учебном стенде. Наличие Docker само по себе не доказывает безопасность.",
+      "stars": 24063,
+      "forks": 3103,
+      "trending_stars_today": 590,
+      "delta_24h": null,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2025-01-06T22:22:48Z",
+      "pushed_at": "2026-09-10T05:45:01Z",
+      "tracking_since": "2026-09-13T13:52:25Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +348 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "GitHub Trending daily",
+        "590 stars today",
+        "GitHub Star History: +500 stars за 2026-09-13 UTC",
+        "README проверен 2026-09-14; SHA 74ccf132da8625917907474037bb8b8353613458"
+      ],
+      "source_url": "https://github.com/vxcontrol/pentagi"
+    },
+    {
+      "full_name": "ayghri/i-have-adhd",
+      "description": "Навык, который заставляет coding-агента выдавать компактный результат без перегруженного объяснения.",
+      "use_case": "Настроить короткие, сканируемые ответы агента для пользователей, которым трудно удерживать внимание на длинных технических сообщениях.",
+      "stars": 44496,
+      "forks": 2559,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-05-13T20:42:06Z",
+      "pushed_at": "2026-09-14T00:05:58Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +613 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-14; SHA ade33c1c6ec46d8e45790e89dea567ec2618cbef"
+      ],
+      "source_url": "https://github.com/ayghri/i-have-adhd"
+    },
+    {
+      "full_name": "nashsu/llm_wiki",
+      "description": "Настольная база знаний, которая превращает документы в связанную wiki и поддерживает ссылки на исходники.",
+      "use_case": "Сравнить ответы по исходным документам и по wiki на небольшом несекретном наборе, отдельно проверяя происхождение каждого утверждения.",
+      "stars": 19367,
+      "forks": 2196,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": null,
+      "created_at": "2026-04-08T11:24:01Z",
+      "pushed_at": "2026-08-25T06:42:02Z",
+      "tracking_since": "2026-09-12T06:32:05Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +110 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-14; SHA 47020c0ae0414363f23c6d1af1a1d5c8a1a57003"
+      ],
+      "source_url": "https://github.com/nashsu/llm_wiki"
+    },
+    {
+      "full_name": "microsoft/markitdown",
+      "description": "Утилита Microsoft для преобразования документов и других файлов в Markdown.",
+      "use_case": "Нормализовать документы для поиска и анализа агентом. Обрабатывать недоверенные файлы с минимальными правами: утилита имеет доступ к ресурсам процесса.",
+      "stars": 183658,
+      "forks": 13514,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2024-11-13T19:56:40Z",
+      "pushed_at": "2026-09-12T20:25:34Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +211 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-14; SHA 5c5a0ccaa51f8f4309f50f3394d75ab10232c1ac"
+      ],
+      "source_url": "https://github.com/microsoft/markitdown"
+    },
+    {
+      "full_name": "unslothai/unsloth",
+      "description": "Локальный интерфейс и инструменты для запуска и обучения языковых и других моделей.",
+      "use_case": "Сопоставить поддерживаемые модели, оборудование и условия лицензий с задачей локальной обработки данных, не обещая непроверенную скорость.",
+      "stars": 76126,
+      "forks": 6934,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2023-11-29T16:50:09Z",
+      "pushed_at": "2026-09-14T03:32:05Z",
+      "tracking_since": "2026-09-06T07:08:20Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +35 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-14; SHA 7d6c6801a2613622220b8b5cc7789b5b26dee5f6"
+      ],
+      "source_url": "https://github.com/unslothai/unsloth"
+    },
+    {
+      "full_name": "lightpanda-io/browser",
+      "description": "Headless-браузер на Zig, ориентированный на AI-агентов и автоматизацию.",
+      "use_case": "Подготовить сравнение совместимости с нужными страницами и потребления ресурсов. Заявления авторов о скорости не переносить на свои сценарии без теста.",
+      "stars": 35332,
+      "forks": 1675,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Zig",
+      "license": "AGPL-3.0",
+      "created_at": "2023-02-07T15:19:34Z",
+      "pushed_at": "2026-09-14T00:58:28Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +11 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-14; SHA 264ae424d3788e7b714ed331fb2d61e387c55074"
+      ],
+      "source_url": "https://github.com/lightpanda-io/browser"
+    },
+    {
+      "full_name": "earthtojake/text-to-cad",
+      "description": "Библиотека агентных навыков для CAD, инженерного анализа, подготовки производства и описания роботов.",
+      "use_case": "Разобрать процесс создания и проверки геометрических артефактов на простом несекретном примере до передачи модели в производство.",
+      "stars": 15623,
+      "forks": 1613,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-04-22T01:09:45Z",
+      "pushed_at": "2026-09-14T03:03:14Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 7,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +110 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-14; SHA 41bfd66ca52cb062c1ba0d2bb9c7d57081a5d3df"
+      ],
+      "source_url": "https://github.com/earthtojake/text-to-cad"
+    },
+    {
+      "full_name": "huggingface/transformers",
+      "description": "Библиотека определений моделей для обучения и вывода текстовых, визуальных, аудио- и мультимодальных систем.",
+      "use_case": "Сверять поддержку архитектуры и требования модели перед выбором локального стека обучения или вывода.",
+      "stars": 165598,
+      "forks": 34562,
+      "trending_stars_today": 152,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2018-10-29T13:56:00Z",
+      "pushed_at": "2026-09-13T19:07:39Z",
+      "tracking_since": "2026-09-13T13:52:25Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +295 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "GitHub Trending daily",
+        "152 stars today",
+        "GitHub Star History: +369 stars за 2026-09-13 UTC",
+        "README проверен 2026-09-14; SHA 730084a5a55486821a1d600d8084beb9069f805b"
+      ],
+      "source_url": "https://github.com/huggingface/transformers"
+    },
+    {
+      "full_name": "openai/plugins",
+      "description": "Официальный публичный каталог плагинов OpenAI для расширения возможностей Codex.",
+      "use_case": "Изучать структуру расширений, их manifest и состав навыков перед созданием собственного локального плагина.",
+      "stars": 6628,
+      "forks": 872,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": null,
+      "created_at": "2026-03-04T21:52:32Z",
+      "pushed_at": "2026-09-11T22:01:06Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +48 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-14; SHA e901b40b9d643a5f878157158759fa0a6d3e2909"
+      ],
+      "source_url": "https://github.com/openai/plugins"
+    },
+    {
+      "full_name": "rasbt/LLMs-from-scratch",
+      "description": "Учебный репозиторий Себастьяна Рашки о разработке, предобучении и дообучении GPT-подобной модели на PyTorch.",
+      "use_case": "Разобрать устройство attention, токенизации и обучения на небольших примерах перед проектированием собственной модели.",
+      "stars": 104907,
+      "forks": 16076,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Jupyter Notebook",
+      "license": null,
+      "created_at": "2023-07-23T18:15:57Z",
+      "pushed_at": "2026-09-10T20:36:18Z",
+      "tracking_since": "2026-09-12T06:32:05Z",
+      "score": 7,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-14T03:36:08Z",
+        "Собственный рост +36 с 2026-09-13T13:52:25Z; не за 24 часа",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-14; SHA 15aab7947813d052aff6817966f94661c899f430"
+      ],
+      "source_url": "https://github.com/rasbt/LLMs-from-scratch"
+    }
+  ],
+  "daily_action": {
+    "title": "Проверить актуальность источников установленных навыков",
+    "plan": "Для пяти используемых навыков записать исходный репозиторий и версию. Проверить README на deprecated и указанный преемник. Ничего не переустанавливать автоматически.",
+    "expected_signal": "Есть список пяти источников с версией и статусом; устаревшие примеры не используются как актуальный эталон.",
+    "link": "https://github.com/openai/plugins"
+  },
+  "corrections": [
+    {
+      "id": "openai-skills-deprecation-correction-2026-09-14",
+      "text": "Исправление предыдущего выпуска: openai/skills был описан без оговорки об устаревании. README помечен deprecated с 22 июня 2026 и направляет к openai/plugins. Старый каталог исключен из текущих рекомендаций; это исправление, не новый релиз.",
+      "source_url": "https://github.com/openai/skills/commit/778b0e6129cf18cbaee3bf11479f583fadae8d03"
+    }
+  ],
+  "errors": []
+}
