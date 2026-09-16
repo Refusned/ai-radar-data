@@ -1,0 +1,457 @@
+{
+  "schema_version": "1.0",
+  "run_key": "ai-radar:2026-09-16T07:30:00+04:00",
+  "attempt_id": "09afe257-ddc7-4717-b50c-3301082ab779",
+  "generated_at": "2026-09-16T03:35:18Z",
+  "window_start": "2026-09-14T03:36:08Z",
+  "window_end": "2026-09-16T03:35:18Z",
+  "status": "complete",
+  "source_health": [
+    {
+      "source_key": "openai",
+      "label": "OpenAI",
+      "status": "ok",
+      "detail": "Проверены https://openai.com/news/ и поиск по датам. Новые подходящие события в окне не подтверждены; кейс из прошлого выпуска не повторяется."
+    },
+    {
+      "source_key": "anthropic",
+      "label": "Anthropic",
+      "status": "ok",
+      "detail": "Проверен https://www.anthropic.com/news и поиск по датам. Последнее видимое объявление от 10 сентября, вне окна."
+    },
+    {
+      "source_key": "google",
+      "label": "Google / DeepMind",
+      "status": "ok",
+      "detail": "Проверены https://blog.google/innovation-and-ai/ и https://deepmind.google/blog/. Подтвержден запуск голосовых моделей 15 сентября; упомянутая рядом транскрипция была выпущена раньше."
+    },
+    {
+      "source_key": "microsoft-github",
+      "label": "Microsoft / GitHub",
+      "status": "ok",
+      "detail": "Проверены https://github.blog/changelog/ и https://news.microsoft.com/source/topics/ai/. Включено обновление выбора моделей от 14 сентября; прочитано объявление о свойствах репозиториев от 15 сентября."
+    },
+    {
+      "source_key": "meta",
+      "label": "Meta AI",
+      "status": "ok",
+      "detail": "Проверен https://ai.meta.com/blog/. Последние видимые публикации вне окна; новых подходящих событий не подтверждено."
+    },
+    {
+      "source_key": "xai",
+      "label": "xAI",
+      "status": "ok",
+      "detail": "Проверен https://x.ai/news. Новых подходящих событий в окне не обнаружено."
+    },
+    {
+      "source_key": "mistral",
+      "label": "Mistral",
+      "status": "ok",
+      "detail": "Проверен https://mistral.ai/news/. Последняя видимая публикация от 10 сентября, вне окна."
+    },
+    {
+      "source_key": "nvidia",
+      "label": "NVIDIA",
+      "status": "ok",
+      "detail": "Проверен https://blogs.nvidia.com/. Включены поддержка Windows для локального агента и анонс CRM-модели Koa; будущие пилоты отделены от текущей доступности."
+    },
+    {
+      "source_key": "hugging-face",
+      "label": "Hugging Face",
+      "status": "ok",
+      "detail": "Проверены https://huggingface.co/blog и https://huggingface.co/blog/feed.xml. Подходящих для включения новых публикаций после проверки и фильтрации не отобрано."
+    },
+    {
+      "source_key": "github-trending",
+      "label": "GitHub Trending",
+      "status": "ok",
+      "detail": "Проверен https://github.com/trending?since=daily: 14 позиций. Объединены кандидаты из AI-topic search, прошлого выпуска и ссылок официальных публикаций, менее 50 уникальных проектов."
+    },
+    {
+      "source_key": "github-api",
+      "label": "GitHub API",
+      "status": "ok",
+      "detail": "Для 14 выбранных проектов проверены метаданные и README. Рост 12 проектов измерен относительно прошлого выпуска; два новых подтверждены Trending и /stargazers/history?per_page=1. Код не запускался."
+    },
+    {
+      "source_key": "window",
+      "label": "Окно выпуска",
+      "status": "ok",
+      "detail": "От 2026-09-14T03:36:08Z до 2026-09-16T03:35:18Z. Около 48 часов с последнего полного выпуска. delta_24h остается null; собственный рост и stars today разделены."
+    }
+  ],
+  "news_items": [
+    {
+      "id": "google-gemini-38-live-2026-09-15",
+      "title": "Google выпустила Gemini 3.8 Live и Live Extended Thinking",
+      "summary": "Новые голосовые модели умеют продолжать диалог во время фоновых вызовов инструментов. Extended Thinking рассчитана на более сложные многошаговые задачи. Развертывание началось в Gemini API и AI Studio; доступность в пользовательских и корпоративных продуктах различается.",
+      "why_it_matters": "Асинхронные действия позволяют голосовому агенту отвечать пользователю, пока внешний сервис выполняет запрос. Заявления о качестве требуют проверки на своих сценариях.",
+      "apply_today": "Подготовить сценарии с перебиванием, задержкой инструмента и сменой языка. Сравнивать не только задержку ответа, но и правильность завершения задачи; не подключать живые отправки.",
+      "topic": "voice-agents",
+      "score": 9,
+      "source_name": "Google / DeepMind",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+      "source_date": "2026-09-15"
+    },
+    {
+      "id": "github-copilot-auto-tiers-2026-09-14",
+      "title": "Copilot Auto получил выбор приоритета цены, скорости и качества",
+      "summary": "В автоматическом выборе модели появились три режима: efficiency, balance и intelligence. Набор доступных моделей одинаков, но при выборе меняются приоритеты. Функция постепенно появляется в VS Code, Copilot CLI и приложении Copilot; списание зависит от выбранной модели.",
+      "why_it_matters": "Сложность задачи можно учитывать при маршрутизации без ручного выбора модели. Режим intelligence не гарантирует, что каждый запрос попадет к самой большой модели.",
+      "apply_today": "На наборе одинаковых безопасных задач сравнить качество, задержку и фактическое потребление каждого режима, если функция уже доступна. Не менять платные настройки автоматически.",
+      "topic": "coding-agents",
+      "score": 8,
+      "source_name": "GitHub Changelog",
+      "source_url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection/",
+      "source_date": "2026-09-14"
+    },
+    {
+      "id": "perplexity-windows-rtx-2026-09-14",
+      "title": "Perplexity Portable Computer стал доступен на Windows с NVIDIA RTX",
+      "summary": "NVIDIA сообщила о запуске локальной версии Perplexity Computer в приложении для Windows. Указано требование GeForce RTX или RTX PRO с видеопамятью от 24 ГБ. Система использует локальные модели и может запрашивать разрешение на передачу задачи в облако.",
+      "why_it_matters": "Появился готовый вариант локального агента для совместимых Windows-компьютеров. Требования к оборудованию существенны; локальный режим не отменяет проверки коннекторов и возможной передачи данных.",
+      "apply_today": "Сверить видеопамять и доступность продукта, затем описать тест на несекретных документах. До использования реальных данных проверить границы локальной обработки и облачного перехода.",
+      "topic": "local-ai",
+      "score": 8,
+      "source_name": "NVIDIA Blog",
+      "source_url": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/",
+      "source_date": "2026-09-14"
+    },
+    {
+      "id": "salesforce-koa-nemotron-2026-09-15",
+      "title": "Salesforce анонсировала CRM-модель Koa на базе NVIDIA Nemotron",
+      "summary": "На Dreamforce представлена Koa, специализированная модель для Agentforce на базе Nemotron 3 Super. По сообщению NVIDIA, модель уже применяется внутри Salesforce, клиентские пилоты запланированы на октябрь, а общая доступность в регионах США ожидается зимой 2026 года.",
+      "why_it_matters": "Пример адаптации открытой базовой модели под CRM-процессы и собственную инфраструктуру. Это анонс будущих клиентских пилотов, а не общедоступный инструмент для немедленного внедрения.",
+      "apply_today": "Выделить типовые CRM-задачи и критерии приемки специализированной модели. Не переносить заявленные авторами результаты бенчмарка на свои процессы без независимого теста.",
+      "topic": "enterprise-agents",
+      "score": 7,
+      "source_name": "NVIDIA Blog / Dreamforce",
+      "source_url": "https://blogs.nvidia.com/blog/jensen-huang-dreamforce/",
+      "source_date": "2026-09-15"
+    }
+  ],
+  "repositories": [
+    {
+      "full_name": "JustVugg/colibri",
+      "description": "Движок вывода MoE-моделей на C с распределением весов между накопителем, RAM и VRAM.",
+      "use_case": "По документации сопоставить требования модели с имеющимся оборудованием. Скорость на своем компьютере не подтверждена; код в этом выпуске не запускался.",
+      "stars": 34005,
+      "forks": 3557,
+      "trending_stars_today": 2026,
+      "delta_24h": null,
+      "language": "C",
+      "license": "Apache-2.0",
+      "created_at": "2026-07-01T12:27:49Z",
+      "pushed_at": "2026-09-15T21:33:15Z",
+      "tracking_since": "2026-09-13T13:52:25Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +3897 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "GitHub Trending daily",
+        "2026 stars today",
+        "README проверен 2026-09-16; SHA f745e778fb0db24253953b8b937958d4c955dd60",
+        "GitHub Star History: +1439 stars за 2026-09-15 UTC"
+      ],
+      "source_url": "https://github.com/JustVugg/colibri"
+    },
+    {
+      "full_name": "earendil-works/pi",
+      "description": "Набор инструментов для AI-агентов: общий интерфейс к моделям, цикл работы агента и консольный coding-агент.",
+      "use_case": "Изучить разделение runtime, вызовов инструментов и управления состоянием перед проектированием своего агента. Код и зависимости в этом выпуске не запускались.",
+      "stars": 105845,
+      "forks": 13299,
+      "trending_stars_today": 458,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "MIT",
+      "created_at": "2025-08-09T14:03:50Z",
+      "pushed_at": "2026-09-15T23:30:09Z",
+      "tracking_since": "2026-09-16T03:35:18Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Первое собственное наблюдение; delta_24h отсутствует",
+        "GitHub Trending daily",
+        "458 stars today",
+        "GitHub Star History: +601 stars за 2026-09-15 UTC",
+        "README проверен 2026-09-16; SHA 730033651bd95551b5e0c34189ec823d07a174b1"
+      ],
+      "source_url": "https://github.com/earendil-works/pi"
+    },
+    {
+      "full_name": "ayghri/i-have-adhd",
+      "description": "Навык, который заставляет coding-агента выдавать компактный результат без перегруженного объяснения.",
+      "use_case": "Настроить короткие, сканируемые ответы агента для пользователей, которым трудно удерживать внимание на длинных технических сообщениях.",
+      "stars": 46343,
+      "forks": 2692,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-05-13T20:42:06Z",
+      "pushed_at": "2026-09-15T20:56:47Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +1847 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-16; SHA 31f5abfaf977119e15ae05230fd67b080e2f5748"
+      ],
+      "source_url": "https://github.com/ayghri/i-have-adhd"
+    },
+    {
+      "full_name": "nashsu/llm_wiki",
+      "description": "Настольная база знаний, которая превращает документы в связанную wiki и поддерживает ссылки на исходники.",
+      "use_case": "Сравнить ответы по исходным документам и по wiki на небольшом несекретном наборе, отдельно проверяя происхождение каждого утверждения.",
+      "stars": 19593,
+      "forks": 2207,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": null,
+      "created_at": "2026-04-08T11:24:01Z",
+      "pushed_at": "2026-08-25T06:42:02Z",
+      "tracking_since": "2026-09-12T06:32:05Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +226 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-16; SHA 47020c0ae0414363f23c6d1af1a1d5c8a1a57003"
+      ],
+      "source_url": "https://github.com/nashsu/llm_wiki"
+    },
+    {
+      "full_name": "microsoft/markitdown",
+      "description": "Утилита Microsoft для преобразования документов и других файлов в Markdown.",
+      "use_case": "Нормализовать документы для поиска и анализа агентом. Обрабатывать недоверенные файлы с минимальными правами: утилита имеет доступ к ресурсам процесса.",
+      "stars": 184479,
+      "forks": 13594,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2024-11-13T19:56:40Z",
+      "pushed_at": "2026-09-16T00:16:34Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +821 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-16; SHA 5c5a0ccaa51f8f4309f50f3394d75ab10232c1ac"
+      ],
+      "source_url": "https://github.com/microsoft/markitdown"
+    },
+    {
+      "full_name": "danny-avila/LibreChat",
+      "description": "Самостоятельно размещаемый интерфейс чатов и агентов с несколькими провайдерами, MCP, навыками и управлением доступом.",
+      "use_case": "Оценить модель прав и подтверждения действий для внутреннего рабочего пространства. Attached workspaces помечены авторами как высокоэкспериментальная функция.",
+      "stars": 43910,
+      "forks": 9033,
+      "trending_stars_today": 254,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "MIT",
+      "created_at": "2023-02-12T01:06:52Z",
+      "pushed_at": "2026-09-16T03:31:23Z",
+      "tracking_since": "2026-09-16T03:35:18Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Первое собственное наблюдение; delta_24h отсутствует",
+        "GitHub Trending daily",
+        "254 stars today",
+        "GitHub Star History: +333 stars за 2026-09-15 UTC",
+        "README проверен 2026-09-16; SHA 4a6b43c6c60d7a09a7d60aaa4b2fc453d47f15c8"
+      ],
+      "source_url": "https://github.com/danny-avila/LibreChat"
+    },
+    {
+      "full_name": "multimodal-art-projection/YuE",
+      "description": "YuE2 генерирует музыку через редактируемый план мелодии и аккордов, затем создает вокал и сопровождение.",
+      "use_case": "Оценить управляемость музыкального плана для собственных роликов. Использовать только свои или разрешенные материалы; лицензии весов проверять отдельно.",
+      "stars": 9032,
+      "forks": 981,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2025-01-23T06:21:58Z",
+      "pushed_at": "2026-09-14T10:31:07Z",
+      "tracking_since": "2026-09-13T13:52:25Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +1196 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-16; SHA 167c9353262d20a327b80edab50b8da6aa4d0fb9"
+      ],
+      "source_url": "https://github.com/multimodal-art-projection/YuE"
+    },
+    {
+      "full_name": "vxcontrol/pentagi",
+      "description": "Система AI-агентов для автоматизированного тестирования безопасности с инструментами, памятью и наблюдением за действиями.",
+      "use_case": "Изучить архитектуру изоляции и надзора для будущего теста только на собственном учебном стенде. Наличие Docker само по себе не доказывает безопасность.",
+      "stars": 24505,
+      "forks": 3139,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2025-01-06T22:22:48Z",
+      "pushed_at": "2026-09-10T05:45:01Z",
+      "tracking_since": "2026-09-13T13:52:25Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +442 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-16; SHA 74ccf132da8625917907474037bb8b8353613458"
+      ],
+      "source_url": "https://github.com/vxcontrol/pentagi"
+    },
+    {
+      "full_name": "unslothai/unsloth",
+      "description": "Локальный интерфейс и инструменты для запуска и обучения языковых и других моделей.",
+      "use_case": "Сопоставить поддерживаемые модели, оборудование и условия лицензий с задачей локальной обработки данных, не обещая непроверенную скорость.",
+      "stars": 76213,
+      "forks": 6946,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2023-11-29T16:50:09Z",
+      "pushed_at": "2026-09-16T03:29:02Z",
+      "tracking_since": "2026-09-06T07:08:20Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +87 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-16; SHA a2823b4ddebd2dbe809ba5a0af9db4872ca21ca4"
+      ],
+      "source_url": "https://github.com/unslothai/unsloth"
+    },
+    {
+      "full_name": "lightpanda-io/browser",
+      "description": "Headless-браузер на Zig, ориентированный на AI-агентов и автоматизацию.",
+      "use_case": "Подготовить сравнение совместимости с нужными страницами и потребления ресурсов. Заявления авторов о скорости не переносить на свои сценарии без теста.",
+      "stars": 35371,
+      "forks": 1676,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Zig",
+      "license": "AGPL-3.0",
+      "created_at": "2023-02-07T15:19:34Z",
+      "pushed_at": "2026-09-16T02:26:53Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +39 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-16; SHA 8eb3763fc0dfdc7f4973b2a0866c4ed040446eb0"
+      ],
+      "source_url": "https://github.com/lightpanda-io/browser"
+    },
+    {
+      "full_name": "huggingface/transformers",
+      "description": "Библиотека определений моделей для обучения и вывода текстовых, визуальных, аудио- и мультимодальных систем.",
+      "use_case": "Сверять поддержку архитектуры и требования модели перед выбором локального стека обучения или вывода.",
+      "stars": 166213,
+      "forks": 34589,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2018-10-29T13:56:00Z",
+      "pushed_at": "2026-09-16T03:24:45Z",
+      "tracking_since": "2026-09-13T13:52:25Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +615 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-16; SHA 730084a5a55486821a1d600d8084beb9069f805b"
+      ],
+      "source_url": "https://github.com/huggingface/transformers"
+    },
+    {
+      "full_name": "openai/plugins",
+      "description": "Официальный репозиторий примеров плагинов Codex с manifest, навыками и дополнительными компонентами.",
+      "use_case": "Изучать структуру расширений, их manifest и состав навыков перед созданием собственного локального плагина.",
+      "stars": 6798,
+      "forks": 889,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": null,
+      "created_at": "2026-03-04T21:52:32Z",
+      "pushed_at": "2026-09-16T00:19:19Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +170 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-16; SHA e901b40b9d643a5f878157158759fa0a6d3e2909"
+      ],
+      "source_url": "https://github.com/openai/plugins"
+    },
+    {
+      "full_name": "earthtojake/text-to-cad",
+      "description": "Библиотека агентных навыков для CAD, инженерного анализа, подготовки производства и описания роботов.",
+      "use_case": "Разобрать процесс создания и проверки геометрических артефактов на простом несекретном примере до передачи модели в производство.",
+      "stars": 15918,
+      "forks": 1654,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-04-22T01:09:45Z",
+      "pushed_at": "2026-09-16T01:20:03Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 7,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +295 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-16; SHA 41bfd66ca52cb062c1ba0d2bb9c7d57081a5d3df"
+      ],
+      "source_url": "https://github.com/earthtojake/text-to-cad"
+    },
+    {
+      "full_name": "rasbt/LLMs-from-scratch",
+      "description": "Учебный репозиторий Себастьяна Рашки о разработке, предобучении и дообучении GPT-подобной модели на PyTorch.",
+      "use_case": "Разобрать устройство attention, токенизации и обучения на небольших примерах перед проектированием собственной модели.",
+      "stars": 105043,
+      "forks": 16100,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Jupyter Notebook",
+      "license": null,
+      "created_at": "2023-07-23T18:15:57Z",
+      "pushed_at": "2026-09-10T20:36:18Z",
+      "tracking_since": "2026-09-12T06:32:05Z",
+      "score": 7,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-16T03:35:18Z",
+        "Собственный рост +136 с 2026-09-14T03:36:08Z; интервал около 48 часов",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-16; SHA 15aab7947813d052aff6817966f94661c899f430"
+      ],
+      "source_url": "https://github.com/rasbt/LLMs-from-scratch"
+    }
+  ],
+  "daily_action": {
+    "title": "Подготовить проверку голосового агента при задержке инструмента",
+    "plan": "Составить пять сценариев: обычный ответ, перебивание, медленный инструмент, ошибка инструмента и смена языка. Для каждого заранее записать ожидаемый ответ и допустимое внешнее действие. Все отправки и изменения данных заменить имитациями; сегодня подготовить только план проверки.",
+    "expected_signal": "Пять сценариев с проверяемым исходом и запретом повторного внешнего действия при неизвестном результате. Отдельно учитываются непрерывность диалога и завершение задачи.",
+    "link": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/"
+  },
+  "corrections": [],
+  "errors": []
+}
