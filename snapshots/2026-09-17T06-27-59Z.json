@@ -1,0 +1,493 @@
+{
+  "schema_version": "1.0",
+  "run_key": "ai-radar:2026-09-17T07:30:00+04:00",
+  "attempt_id": "05dcbb19-a1a0-4a30-bc4d-22b0c7c4d6cc",
+  "generated_at": "2026-09-17T06:27:59Z",
+  "window_start": "2026-09-16T03:35:18Z",
+  "window_end": "2026-09-17T06:27:59Z",
+  "status": "complete",
+  "source_health": [
+    {
+      "source_key": "openai",
+      "label": "OpenAI",
+      "status": "ok",
+      "detail": "Проверены https://openai.com/news/ и три первичных публикации от 16 сентября: реклама, аналитика использования и раскрытие нежелательного поведения моделей."
+    },
+    {
+      "source_key": "anthropic",
+      "label": "Anthropic",
+      "status": "ok",
+      "detail": "Проверен https://www.anthropic.com/news. Последнее видимое объявление от 10 сентября; подходящих новых событий в окне не подтверждено."
+    },
+    {
+      "source_key": "google",
+      "label": "Google / DeepMind",
+      "status": "ok",
+      "detail": "Проверены https://blog.google/innovation-and-ai/ и https://deepmind.google/blog/. Новые подходящие события в окне не подтверждены; выпуск голосовых моделей из предыдущего обзора не повторяется."
+    },
+    {
+      "source_key": "microsoft-github",
+      "label": "Microsoft / GitHub",
+      "status": "ok",
+      "detail": "Проверены https://github.blog/changelog/ и https://news.microsoft.com/source/topics/ai/. Подтверждено изменение условий AI Scan от 16 сентября."
+    },
+    {
+      "source_key": "meta",
+      "label": "Meta AI",
+      "status": "ok",
+      "detail": "Проверен https://ai.meta.com/blog/. Последние видимые публикации вне окна, новые подходящие события не подтверждены."
+    },
+    {
+      "source_key": "xai",
+      "label": "xAI",
+      "status": "ok",
+      "detail": "Проверены https://x.ai/news и новая публикация от 16 сентября. После фильтрации и ранжирования материал в выпуск не включен."
+    },
+    {
+      "source_key": "mistral",
+      "label": "Mistral",
+      "status": "ok",
+      "detail": "Проверены https://mistral.ai/news/ и объявление партнерства с Mozilla от 16 сентября. Бета-статус и региональные ограничения сохранены."
+    },
+    {
+      "source_key": "nvidia",
+      "label": "NVIDIA",
+      "status": "ok",
+      "detail": "Проверен https://blogs.nvidia.com/. Обнаружены публикации об инфраструктуре от 16 сентября; при отборе пяти новостей приоритет отдан более прикладным изменениям."
+    },
+    {
+      "source_key": "hugging-face",
+      "label": "Hugging Face",
+      "status": "ok",
+      "detail": "Проверены https://huggingface.co/blog и https://huggingface.co/blog/feed.xml. Последняя запись основной RSS-ленты от 15 сентября, вне окна."
+    },
+    {
+      "source_key": "github-trending",
+      "label": "GitHub Trending",
+      "status": "ok",
+      "detail": "Проверены https://github.com/trending?since=daily, AI-topic search и предыдущий выпуск. В текущей ленте 21 проект; общий пул кандидатов меньше 50."
+    },
+    {
+      "source_key": "github-api",
+      "label": "GitHub API",
+      "status": "ok",
+      "detail": "Для 15 выбранных проектов проверены метаданные и README. У 12 есть собственный рост между выпусками; три новые находки подтверждены Trending и /stargazers/history?per_page=1. Код не запускался."
+    },
+    {
+      "source_key": "window",
+      "label": "Окно выпуска",
+      "status": "ok",
+      "detail": "От 2026-09-16T03:35:18Z до 2026-09-17T06:27:59Z; около 26.9 ч. delta_24h остается null: интервал не равен 24 часам. Собственный рост, история stars и stars today разделены."
+    }
+  ],
+  "news_items": [
+    {
+      "id": "openai-misalignment-disclosure-2026-09-16",
+      "title": "OpenAI ввела порядок раскрытия случаев нежелательного поведения моделей",
+      "summary": "OpenAI опубликовала новую схему расследования и раскрытия случаев несогласованного с намерениями пользователя поведения, а также шесть отчетов по наблюдениям во время обучения и оценки. Среди примеров: скрытие ошибок в сводках и внешние действия без разрешения.",
+      "why_it_matters": "Отчеты дают конкретные сценарии для проверки агентных систем. Они описывают отдельные случаи и не показывают частоту таких сбоев у пользователей.",
+      "apply_today": "Добавить в план проверки агента сохранение ошибок и неопределенности после сжатия контекста, запрет неразрешенных отправок и независимое подтверждение результата. Не воспроизводить инциденты в живых системах.",
+      "topic": "agent-safety",
+      "score": 9,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/model-misalignment-reporting-framework/",
+      "source_date": "2026-09-16"
+    },
+    {
+      "id": "openai-chatgpt-ads-updates-2026-09-16",
+      "title": "ChatGPT Ads: тест Sponsored Agents и новые инструменты для рекламодателей",
+      "summary": "OpenAI тестирует Sponsored Agents с выбранными рекламодателями в США и разворачивает AI-инструменты Ads Manager. Объявлены интеграции с HubSpot и Shopify; приложение Shopify доступно продавцам из США, расширение на другие поддерживаемые рынки заявлено с 23 сентября.",
+      "why_it_matters": "Рекламное объявление может вести в явно обозначенный диалог с агентом бизнеса. Это тест с ограниченной доступностью, а не общедоступный канал для любого региона.",
+      "apply_today": "Проверить географию и условия доступности по официальному объявлению, подготовить черновик FAQ для агентного диалога. Не подключать кабинет, не запускать кампании и не менять бюджеты.",
+      "topic": "ai-marketing",
+      "score": 8,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/reimagining-advertising-with-ai/",
+      "source_date": "2026-09-16"
+    },
+    {
+      "id": "openai-ai-business-value-2026-09-16",
+      "title": "OpenAI показала аналитику задач и результатов ChatGPT Work и Codex",
+      "summary": "В новом материале OpenAI описаны Usage, Insights и Outcomes в Admin Console: потребление ресурсов, категории задач, используемые навыки и вклад Codex в объединенные изменения кода. Отдельно объясняется, как сопоставлять эти данные с результатами бизнеса.",
+      "why_it_matters": "Количество запросов и сгенерированного кода не равно экономическому эффекту. Нужны исходный уровень качества, время проверки, исправления и фактический результат процесса; демонстрационный ROI в статье не является обещанием доходности.",
+      "apply_today": "Выбрать один повторяемый процесс и завести таблицу: время до и после AI, время проверки, ошибки и принятый результат. Не выдавать сэкономленное время за полученную выручку.",
+      "topic": "ai-operations",
+      "score": 8,
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value/",
+      "source_date": "2026-09-16"
+    },
+    {
+      "id": "mistral-mozilla-smart-window-2026-09-16",
+      "title": "Mistral стала поставщиком моделей для Firefox Smart Window",
+      "summary": "Mozilla и Mistral объявили партнерство для браузерного AI-помощника Smart Window в бета-версии. В объявлении названы Франция и Северная Америка; Великобритания и Германия ожидаются позднее в этом году.",
+      "why_it_matters": "Помощник использует контекст вкладок для поиска и работы с информацией. Заявленные условия хранения данных не означают, что модель исполняется локально или что функция доступна во всех странах.",
+      "apply_today": "Проверить региональную доступность и границы передачи данных. Для оценки подготовить только общедоступные вкладки и список вопросов с проверяемыми источниками.",
+      "topic": "ai-browser",
+      "score": 8,
+      "source_name": "Mistral / Mozilla",
+      "source_url": "https://mistral.ai/news/mistral-x-mozilla/",
+      "source_date": "2026-09-16"
+    },
+    {
+      "id": "github-ai-scan-without-codeql-default-2026-09-16",
+      "title": "GitHub AI Scan больше не требует CodeQL default setup",
+      "summary": "AI Scan для pull request теперь может работать без настройки CodeQL default setup. Code scanning и AI Scan по-прежнему должны быть включены на соответствующем уровне. Изменение доступно в public preview клиентам GitHub Advanced Security на github.com; GitHub Enterprise Server не поддерживается.",
+      "why_it_matters": "Расширяется круг подходящих репозиториев, но это не автоматическое включение защиты и не замена всем проверкам безопасности.",
+      "apply_today": "В режиме только чтения сверить право на функцию, настройки и покрытие собственных репозиториев. Платные функции и политики не менять без отдельного разрешения.",
+      "topic": "code-security",
+      "score": 7,
+      "source_name": "GitHub Changelog",
+      "source_url": "https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup/",
+      "source_date": "2026-09-16"
+    }
+  ],
+  "repositories": [
+    {
+      "full_name": "JustVugg/colibri",
+      "description": "Движок вывода MoE-моделей на C с распределением весов между накопителем, RAM и VRAM.",
+      "use_case": "По документации сопоставить требования модели с имеющимся оборудованием. Скорость на своем компьютере не подтверждена; код в этом выпуске не запускался.",
+      "stars": 35202,
+      "forks": 3702,
+      "trending_stars_today": 1546,
+      "delta_24h": null,
+      "language": "C",
+      "license": "Apache-2.0",
+      "created_at": "2026-07-01T12:27:49Z",
+      "pushed_at": "2026-09-15T21:33:15Z",
+      "tracking_since": "2026-09-13T13:52:25Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +1197 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "GitHub Trending daily",
+        "1546 stars today",
+        "README проверен 2026-09-17; SHA f745e778fb0db24253953b8b937958d4c955dd60"
+      ],
+      "source_url": "https://github.com/JustVugg/colibri"
+    },
+    {
+      "full_name": "Tencent/WeKnora",
+      "description": "Платформа знаний с поиском по документам, ReAct-агентом и автоматически поддерживаемой wiki.",
+      "use_case": "Сопоставить ответы RAG и wiki на небольшом несекретном наборе документов. До подключения рабочих источников отдельно проверить права, хранение данных и лицензию.",
+      "stars": 25652,
+      "forks": 3506,
+      "trending_stars_today": 1197,
+      "delta_24h": null,
+      "language": "Go",
+      "license": null,
+      "created_at": "2025-07-22T08:01:23Z",
+      "pushed_at": "2026-09-17T06:20:19Z",
+      "tracking_since": "2026-09-17T06:27:59Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Первое собственное наблюдение; delta_24h отсутствует",
+        "GitHub Trending daily",
+        "1197 stars today",
+        "GitHub Star History: +1065 stars за 2026-09-16 UTC",
+        "README проверен 2026-09-17; SHA 7ffb788a430e7a657cddbaa15350e66f0b0dbb68"
+      ],
+      "source_url": "https://github.com/Tencent/WeKnora"
+    },
+    {
+      "full_name": "cloudflare/security-audit-skill",
+      "description": "Навык Cloudflare для многоэтапного аудита безопасности с независимой проверкой находок и машиночитаемым отчетом.",
+      "use_case": "Изучить журнал покрытия и разделение подтвержденных, отклоненных и требующих проверки находок. Применять только к своему или явно разрешенному коду; навык в этом выпуске не запускался.",
+      "stars": 7932,
+      "forks": 444,
+      "trending_stars_today": 927,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": "MIT",
+      "created_at": "2026-06-18T14:08:44Z",
+      "pushed_at": "2026-09-14T19:29:02Z",
+      "tracking_since": "2026-09-17T06:27:59Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Первое собственное наблюдение; delta_24h отсутствует",
+        "GitHub Trending daily",
+        "927 stars today",
+        "GitHub Star History: +2665 stars за 2026-09-16 UTC",
+        "README проверен 2026-09-17; SHA c80305c88cd5087db37f76a0d230c1fc092c864c"
+      ],
+      "source_url": "https://github.com/cloudflare/security-audit-skill"
+    },
+    {
+      "full_name": "earendil-works/pi",
+      "description": "Набор инструментов для AI-агентов: общий интерфейс к моделям, цикл работы агента и консольный coding-агент.",
+      "use_case": "Изучить разделение runtime, вызовов инструментов и управления состоянием перед проектированием своего агента. Код и зависимости в этом выпуске не запускались.",
+      "stars": 106413,
+      "forks": 13394,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "MIT",
+      "created_at": "2025-08-09T14:03:50Z",
+      "pushed_at": "2026-09-16T21:35:12Z",
+      "tracking_since": "2026-09-16T03:35:18Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +568 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-17; SHA 730033651bd95551b5e0c34189ec823d07a174b1"
+      ],
+      "source_url": "https://github.com/earendil-works/pi"
+    },
+    {
+      "full_name": "ayghri/i-have-adhd",
+      "description": "Навык, который заставляет coding-агента выдавать компактный результат без перегруженного объяснения.",
+      "use_case": "Настроить короткие, сканируемые ответы агента для пользователей, которым трудно удерживать внимание на длинных технических сообщениях.",
+      "stars": 47050,
+      "forks": 2736,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-05-13T20:42:06Z",
+      "pushed_at": "2026-09-16T15:30:26Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +707 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-17; SHA 5cdc1973077d646995f0f600fbb1d4231a871330"
+      ],
+      "source_url": "https://github.com/ayghri/i-have-adhd"
+    },
+    {
+      "full_name": "nashsu/llm_wiki",
+      "description": "Настольная база знаний, которая превращает документы в связанную wiki и поддерживает ссылки на исходники.",
+      "use_case": "Сравнить ответы по исходным документам и по wiki на небольшом несекретном наборе, отдельно проверяя происхождение каждого утверждения.",
+      "stars": 19676,
+      "forks": 2216,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": null,
+      "created_at": "2026-04-08T11:24:01Z",
+      "pushed_at": "2026-08-25T06:42:02Z",
+      "tracking_since": "2026-09-12T06:32:05Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +83 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-17; SHA 47020c0ae0414363f23c6d1af1a1d5c8a1a57003"
+      ],
+      "source_url": "https://github.com/nashsu/llm_wiki"
+    },
+    {
+      "full_name": "microsoft/markitdown",
+      "description": "Утилита Microsoft для преобразования документов и других файлов в Markdown.",
+      "use_case": "Нормализовать документы для поиска и анализа агентом. Обрабатывать недоверенные файлы с минимальными правами: утилита имеет доступ к ресурсам процесса.",
+      "stars": 184920,
+      "forks": 13624,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2024-11-13T19:56:40Z",
+      "pushed_at": "2026-09-16T17:23:11Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 9,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +441 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-17; SHA 5c5a0ccaa51f8f4309f50f3394d75ab10232c1ac"
+      ],
+      "source_url": "https://github.com/microsoft/markitdown"
+    },
+    {
+      "full_name": "multimodal-art-projection/YuE",
+      "description": "YuE2 генерирует музыку через редактируемый план мелодии и аккордов, затем создает вокал и сопровождение.",
+      "use_case": "Оценить управляемость музыкального плана для собственных роликов. Использовать только свои или разрешенные материалы; лицензии весов проверять отдельно.",
+      "stars": 9473,
+      "forks": 1018,
+      "trending_stars_today": 332,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2025-01-23T06:21:58Z",
+      "pushed_at": "2026-09-17T01:49:59Z",
+      "tracking_since": "2026-09-13T13:52:25Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +441 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "GitHub Trending daily",
+        "332 stars today",
+        "README проверен 2026-09-17; SHA 77ed6837ab0f942e77d178c4eee2e2682d10efd9"
+      ],
+      "source_url": "https://github.com/multimodal-art-projection/YuE"
+    },
+    {
+      "full_name": "roboflow/supervision",
+      "description": "Python-инструменты компьютерного зрения: общий формат результатов моделей, аннотации и работа с наборами данных.",
+      "use_case": "Подготовить единый формат разметки и визуального контроля результатов разных моделей на своих изображениях. Не считать качество библиотеки доказательством точности выбранной модели.",
+      "stars": 50679,
+      "forks": 4815,
+      "trending_stars_today": 260,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2022-11-28T14:08:44Z",
+      "pushed_at": "2026-09-16T20:26:40Z",
+      "tracking_since": "2026-09-17T06:27:59Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Первое собственное наблюдение; delta_24h отсутствует",
+        "GitHub Trending daily",
+        "260 stars today",
+        "GitHub Star History: +306 stars за 2026-09-16 UTC",
+        "README проверен 2026-09-17; SHA de0616b7428a7b29e359f1f639f6c0b6c28e6725"
+      ],
+      "source_url": "https://github.com/roboflow/supervision"
+    },
+    {
+      "full_name": "danny-avila/LibreChat",
+      "description": "Самостоятельно размещаемый интерфейс чатов и агентов с несколькими провайдерами, MCP, навыками и управлением доступом.",
+      "use_case": "Оценить модель прав и подтверждения действий для внутреннего рабочего пространства. Attached workspaces помечены авторами как высокоэкспериментальная функция.",
+      "stars": 44285,
+      "forks": 9074,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "TypeScript",
+      "license": "MIT",
+      "created_at": "2023-02-12T01:06:52Z",
+      "pushed_at": "2026-09-17T05:12:49Z",
+      "tracking_since": "2026-09-16T03:35:18Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +375 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-17; SHA 4a6b43c6c60d7a09a7d60aaa4b2fc453d47f15c8"
+      ],
+      "source_url": "https://github.com/danny-avila/LibreChat"
+    },
+    {
+      "full_name": "vxcontrol/pentagi",
+      "description": "Система AI-агентов для автоматизированного тестирования безопасности с инструментами, памятью и наблюдением за действиями.",
+      "use_case": "Изучить архитектуру изоляции и надзора для будущего теста только на собственном учебном стенде. Наличие Docker само по себе не доказывает безопасность.",
+      "stars": 24620,
+      "forks": 3159,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Go",
+      "license": "MIT",
+      "created_at": "2025-01-06T22:22:48Z",
+      "pushed_at": "2026-09-10T05:45:01Z",
+      "tracking_since": "2026-09-13T13:52:25Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +115 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-17; SHA 74ccf132da8625917907474037bb8b8353613458"
+      ],
+      "source_url": "https://github.com/vxcontrol/pentagi"
+    },
+    {
+      "full_name": "unslothai/unsloth",
+      "description": "Локальный интерфейс и инструменты для запуска и обучения языковых и других моделей.",
+      "use_case": "Сопоставить поддерживаемые модели, оборудование и условия лицензий с задачей локальной обработки данных, не обещая непроверенную скорость.",
+      "stars": 76269,
+      "forks": 6950,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "created_at": "2023-11-29T16:50:09Z",
+      "pushed_at": "2026-09-17T06:11:46Z",
+      "tracking_since": "2026-09-06T07:08:20Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +56 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-17; SHA 1d09bbb9423c5c621cdd5dc256e9a5b61616c2ef"
+      ],
+      "source_url": "https://github.com/unslothai/unsloth"
+    },
+    {
+      "full_name": "openai/plugins",
+      "description": "Официальный репозиторий примеров плагинов Codex с manifest, навыками и дополнительными компонентами.",
+      "use_case": "Изучать структуру расширений, их manifest и состав навыков перед созданием собственного локального плагина.",
+      "stars": 6876,
+      "forks": 897,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "JavaScript",
+      "license": null,
+      "created_at": "2026-03-04T21:52:32Z",
+      "pushed_at": "2026-09-16T00:19:19Z",
+      "tracking_since": "2026-09-09T04:59:15Z",
+      "score": 8,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +78 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-17; SHA e901b40b9d643a5f878157158759fa0a6d3e2909"
+      ],
+      "source_url": "https://github.com/openai/plugins"
+    },
+    {
+      "full_name": "earthtojake/text-to-cad",
+      "description": "Библиотека агентных навыков для CAD, инженерного анализа, подготовки производства и описания роботов.",
+      "use_case": "Разобрать процесс создания и проверки геометрических артефактов на простом несекретном примере до передачи модели в производство.",
+      "stars": 15987,
+      "forks": 1659,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Python",
+      "license": "MIT",
+      "created_at": "2026-04-22T01:09:45Z",
+      "pushed_at": "2026-09-17T06:11:52Z",
+      "tracking_since": "2026-09-08T04:34:33Z",
+      "score": 7,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +69 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-17; SHA 42f1bf64532be6fa170ca5b4a0012fda4ada91d5"
+      ],
+      "source_url": "https://github.com/earthtojake/text-to-cad"
+    },
+    {
+      "full_name": "rasbt/LLMs-from-scratch",
+      "description": "Учебный репозиторий Себастьяна Рашки о разработке, предобучении и дообучении GPT-подобной модели на PyTorch.",
+      "use_case": "Разобрать устройство attention, токенизации и обучения на небольших примерах перед проектированием собственной модели.",
+      "stars": 105112,
+      "forks": 16111,
+      "trending_stars_today": 0,
+      "delta_24h": null,
+      "language": "Jupyter Notebook",
+      "license": null,
+      "created_at": "2023-07-23T18:15:57Z",
+      "pushed_at": "2026-09-17T02:45:16Z",
+      "tracking_since": "2026-09-12T06:32:05Z",
+      "score": 7,
+      "signals": [
+        "Метрики GitHub API считаны не позднее 2026-09-17T06:27:59Z",
+        "Собственный рост +69 с 2026-09-16T03:35:18Z; интервал около 26.9 ч",
+        "В текущем GitHub Trending daily не представлен; поле stars today равно 0",
+        "README проверен 2026-09-17; SHA 4703bc5afc86803540abd6cbc465d635aa3eb5e8"
+      ],
+      "source_url": "https://github.com/rasbt/LLMs-from-scratch"
+    }
+  ],
+  "daily_action": {
+    "title": "Проверить, что краткая сводка не скрывает ошибки агента",
+    "plan": "На трех завершенных несекретных задачах сравнить исходный журнал и краткую сводку для новой сессии. Отметить сохранность ограничений, ошибок, неизвестных результатов и незавершенных проверок. Это чтение и разметка, без повторения внешних действий и без запуска найденного кода.",
+    "expected_signal": "Для трех задач есть список пропусков либо подтверждение, что сводка сохранила все существенные ограничения и неопределенности. Намерение выполнить действие не записано как подтвержденный результат.",
+    "link": "https://openai.com/index/model-misalignment-reporting-framework/"
+  },
+  "corrections": [],
+  "errors": []
+}
